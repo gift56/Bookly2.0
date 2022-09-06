@@ -2,6 +2,7 @@ import React from "react";
 import Logo from "../assets/logo.png";
 
 const Header = () => {
+  const navlinks = ["home", "categories", "request a book", "cart"];
   return (
     <header>
       <nav className="contain">
@@ -10,9 +11,10 @@ const Header = () => {
         </div>
 
         <ul>
-            <li>
-                
-            </li>
+          {navlinks.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+          <button>Login</button>
         </ul>
       </nav>
     </header>
