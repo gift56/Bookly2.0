@@ -4,4 +4,9 @@
   width: 1300px;
   margin: 0 auto;
 }
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
 /*# sourceMappingURL=Header.css.map */
