@@ -1,8 +1,10 @@
 {
     "version": 3,
-    "mappings": "AAAA,OAAO,CAAC,sLAAI;AACZ,OAAO,CAAC,sLAAI",
+    "mappings": "AAAA,OAAO,CAAC,sLAAI;AACZ,OAAO,CAAC,sLAAI;ACDZ,AAAA,UAAU,CAAC;EACP,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,MAAM;CACjB",
     "sources": [
-        "Header.scss"
+        "Header.scss",
+        "modules/_classes.scss",
+        "modules/_varibles.scss"
     ],
     "names": [],
     "file": "Header.css"
