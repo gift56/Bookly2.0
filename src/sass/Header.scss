@@ -3,6 +3,7 @@
 
 @import "./modules/classes";
 @import "./modules/varibles";
+@import './modules/hero';
 
 header {
     border-bottom: 2px solid $white;
@@ -63,7 +64,7 @@ header {
     }
     .mobileNav {
         position: absolute;
-        top: 90px;
+        top: 78px;
         left: 0;
         width: 100%;
         z-index: 1;
