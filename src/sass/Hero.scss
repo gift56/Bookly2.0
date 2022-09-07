@@ -137,3 +137,34 @@
         }
     }
 }
+.Desktopselections {
+    background-color: $optionBg;
+    width: 100%;
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: $font1;
+    .Desktopselect {
+        display: flex;
+        align-items: center;
+        background-color: $white;
+        border-radius: 10px;
+        select {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 1rem;
+            border-left: 1px solid $black;
+            cursor: pointer;
+            &:first-child {
+                border-left: none;
+                border-radius: 10px;
+            }
+        }
+    }
+    @media screen and (max-width: 918px) {
+        display: none;
+    }
+}

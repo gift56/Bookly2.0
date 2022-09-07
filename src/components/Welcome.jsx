@@ -39,6 +39,19 @@ const Welcome = () => {
             </div>
           </div>
         </div>
+        <div className="Desktopselections">
+          <h3>Search a Book</h3>
+          <form className="Desktopselect">
+            {options.map(({ name, subOption }) => (
+              <select id={name} key={name}>
+                {subOption.map((option) => (
+                  <option value={name}>{option}</option>
+                ))}
+              </select>
+            ))}
+            <Button className="Desktopsearch" text="Search" />
+          </form>
+        </div>
       </div>
     </section>
   );
