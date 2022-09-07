@@ -1,10 +1,24 @@
-@import './varibles';
+@import "./varibles";
 
 .contain {
-    width: 1300px;
+    width: 80%;
     margin: 0 auto;
+    @media screen and (max-width: 1120px) {
+        width: 90%;
+    }
 }
-a{
+a {
     text-decoration: none;
     color: $black;
+}
+.buttons {
+    font-size: 18px;
+    color: $white;
+    padding: 10px 40px;
+    transition: all 500ms ease;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid;
+    cursor: pointer;
+    font-family: $font2;
 }

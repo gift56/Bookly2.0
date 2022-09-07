@@ -1,12 +1,113 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Sunflower:wght@300;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Sunflower:wght@300;500;700&display=swap");
 .contain {
-  width: 1300px;
+  width: 80%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1120px) {
+  .contain {
+    width: 90%;
+  }
 }
 
 a {
   text-decoration: none;
   color: #000000;
+}
+
+.buttons {
+  font-size: 18px;
+  color: #ffffff;
+  padding: 10px 40px;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  border-bottom: 2px solid #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+
+header .desktopNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0;
+}
+
+header .desktopNav .logo {
+  width: 153px;
+}
+
+header .desktopNav .logo img {
+  width: 100%;
+}
+
+header .desktopNav .ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 3rem;
+}
+
+@media screen and (max-width: 998px) {
+  header .desktopNav .ul {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 918px) {
+  header .desktopNav .ul {
+    display: none;
+  }
+}
+
+header .desktopNav .ul li {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+}
+
+header .desktopNav .ul li:hover {
+  color: #e77d2c;
+}
+
+header .desktopNav .ul .loginbtn {
+  background-color: #e77d2c;
+  border-color: #e77d2c;
+}
+
+header .desktopNav .ul .loginbtn:hover {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=Header.css.map */

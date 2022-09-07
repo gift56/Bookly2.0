@@ -1,20 +1,24 @@
 import React from "react";
 import Logo from "../assets/logo.png";
+import cart from "../assets/cart.png";
+import Button from "./Button";
 
 const Header = () => {
-  const navlinks = ["home", "categories", "request a book", "cart"];
   return (
     <header>
-      <nav className="contain">
-        <div className="logo ">
+      <nav className="contain desktopNav">
+        <div className="logo">
           <img src={Logo} alt="logo" />
         </div>
 
-        <ul>
-          {navlinks.map((item) => (
-            <li key={item}>{item}</li>
-          ))}
-          <button>Login</button>
+        <ul className="ul">
+          <li>Home</li>
+          <li>Categories</li>
+          <li>Request a book</li>
+          <li>
+            Cart <img src={cart} alt="/" />
+          </li>
+          <Button text="Login" className="loginbtn" />
         </ul>
       </nav>
     </header>
