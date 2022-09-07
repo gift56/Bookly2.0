@@ -34,6 +34,7 @@ const Welcome = () => {
                   ))}
                 </select>
               ))}
+              <Button className="search" text="Search" />
             </form>
           </div>
         </div>
