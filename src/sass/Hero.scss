@@ -44,4 +44,29 @@
             width: 100%;
         }
     }
+    .selections {
+        background-color: $optionBg;
+        width: 100%;
+        padding: 12px;
+        .select {
+            display: flex;
+            align-items: center;
+            background-color: $white;
+            border-radius: 10px;
+            .search {
+                padding: 2px 2px;
+                background: $btnbg3;
+            }
+            select {
+                width: 44px;
+                padding: 3px;
+                border: none;
+                outline: none;
+                &:first-child {
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                }
+            }
+        }
+    }
 }
