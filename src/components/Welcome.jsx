@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const Welcome = () => {
   return (
-    <div>Welcome</div>
-  )
-}
+    <section>
+      <div className="contain">
+        
+      </div>
+    </section>
+  );
+};
 
-export default Welcome
+export default Welcome;
