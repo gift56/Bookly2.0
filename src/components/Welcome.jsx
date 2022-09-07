@@ -20,7 +20,17 @@ const Welcome = () => {
             </p>
             <Button className="none" text="Get Started" />
           </div>
-          <div className="Image"></div>
+          <div className="Image">
+            <img src={Hero} alt="/" />
+          </div>
+          <Button className="w-full" text="Get Started" />
+          <div className="selections">
+            <form action="#">
+              <select id="">
+                <option value=""></option>
+              </select>
+            </form>
+          </div>
         </div>
       </div>
     </section>
