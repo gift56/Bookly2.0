@@ -28,12 +28,6 @@ export const options = [
       "Primary 4",
       "Primary 5",
       "Primary 6",
-    ],
-  },
-  {
-    name: "Session",
-    subOption: [
-      "Session",
       "J.S.S.1",
       "J.S.S.2",
       "J.S.S.3",
@@ -41,5 +35,9 @@ export const options = [
       "S.S.S.2",
       "S.S.S.3",
     ],
+  },
+  {
+    name: "Session",
+    subOption: ["Session", "1st Term", "2nd Term", "3rd Term"],
   },
 ];
