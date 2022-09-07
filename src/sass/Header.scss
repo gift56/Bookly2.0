@@ -64,7 +64,7 @@ header {
     .mobileNav {
         position: absolute;
         top: 90px;
-        right: 0;
+        left: 0;
         width: 100%;
         z-index: 1;
         background-color: $white;
@@ -72,6 +72,8 @@ header {
         flex-direction: column;
         justify-content: flex-end;
         align-items: flex-end;
+        transition: all 500ms ease;
+        border-bottom: 1px solid gray;
         .ul {
             display: flex;
             flex-direction: column;

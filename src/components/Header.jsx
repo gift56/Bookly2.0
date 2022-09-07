@@ -22,14 +22,11 @@ const Header = () => {
           </li>
           <Button text="Login" className="loginbtn" />
         </ul>
-        <div
-          onClick={() => setShow((prev) => !prev)}
-          className="toggle"
-        >
+        <div onClick={() => setShow((prev) => !prev)} className="toggle">
           {show ? <FaTimes size={30} /> : <FaBars size={30} />}
         </div>
       </nav>
-      <nav className={`mobileNav`}>
+      <nav className={`mobileNav ${show ? "normal" : "left"}`}>
         <ul className="ul">
           <li>Home</li>
           <li>Categories</li>
@@ -37,7 +34,7 @@ const Header = () => {
           <li>
             Cart <img src={cart} alt="/" />
           </li>
-          <Button text="Login" className="loginbtn" />
+          <Button text="Login" className="loginbtn pb" />
         </ul>
       </nav>
     </header>

@@ -22,3 +22,12 @@ a {
     cursor: pointer;
     font-family: $font2;
 }
+.left {
+    left: -100% !important;
+}
+.normal {
+    left: 0 !important;
+}
+.pb{
+    margin-bottom: 15px;
+}
