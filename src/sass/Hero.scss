@@ -5,15 +5,22 @@
     flex-direction: column;
     padding: 1rem;
     gap: 0.5rem;
+    @media screen and (min-width: 919px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
     button {
         background-color: $btnbg;
         border-radius: 10px;
+        margin: 20px 0 !important;
     }
     .textSide {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         font-family: $font1;
+
         .online {
             color: $btnbg;
             font-size: 18px;
@@ -32,8 +39,12 @@
                 display: block;
             }
             @media screen and (min-width: 580px) {
-                font-size: 85px;
+                font-size: 60px;
                 font-weight: 800;
+                line-height: 60px;
+            }
+            @media screen and (min-width: 1400px) {
+                font-size: 85px;
                 line-height: 90px;
             }
         }
@@ -49,8 +60,12 @@
                 }
             }
             @media screen and (min-width: 580px) {
-                font-size: 22px;
+                font-size: 16px;
                 line-height: 32px;
+            }
+            @media screen and (min-width: 1200px) {
+                font-size: 20px;
+                margin-top: 40px;
             }
         }
     }
@@ -62,6 +77,14 @@
         }
         @media screen and (min-width: 400px) {
             width: 100%;
+        }
+        @media screen and (min-width: 919px) {
+            width: 54% !important;
+            display: flex;
+            justify-content: flex-end;
+            .mobileStart {
+                display: none;
+            }
         }
     }
     .selections {
@@ -82,6 +105,9 @@
                 }
             }
         }
+        @media screen and (min-width: 919px) {
+            display: none;
+        }
         .select {
             display: flex;
             align-items: center;
@@ -90,6 +116,7 @@
             .search {
                 padding: 2px 2px;
                 background: $btnbg3;
+                margin: 0 !important;
             }
             select {
                 width: 44px;
@@ -103,7 +130,7 @@
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
                 }
-                option{
+                option {
                     padding: 1rem;
                 }
             }

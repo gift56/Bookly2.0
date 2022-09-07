@@ -23,19 +23,20 @@ const Welcome = () => {
           </div>
           <div className="Image">
             <img src={Hero} alt="/" />
-          </div>
-          <Button className="w-full" text="Get Started" />
-          <div className="selections">
-            <form className="select">
-              {options.map(({ name, subOption }) => (
-                <select id={name} key={name}>
-                  {subOption.map((option) => (
-                    <option value={name}>{option}</option>
-                  ))}
-                </select>
-              ))}
-              <Button className="search" text="Search" />
-            </form>
+
+            <Button className="w-full mobileStart" text="Get Started" />
+            <div className="selections">
+              <form className="select">
+                {options.map(({ name, subOption }) => (
+                  <select id={name} key={name}>
+                    {subOption.map((option) => (
+                      <option value={name}>{option}</option>
+                    ))}
+                  </select>
+                ))}
+                <Button className="search" text="Search" />
+              </form>
+            </div>
           </div>
         </div>
       </div>
