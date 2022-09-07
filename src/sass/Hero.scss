@@ -19,6 +19,9 @@
             font-size: 18px;
             font-weight: 400;
             line-height: 59px;
+            @media screen and (min-width: 580px) {
+                font-size: 24px;
+            }
         }
         h2 {
             font-size: 45px;
@@ -28,6 +31,11 @@
             span {
                 display: block;
             }
+            @media screen and (min-width: 580px) {
+                font-size: 85px;
+                font-weight: 800;
+                line-height: 90px;
+            }
         }
         p {
             font-weight: 300;
@@ -35,6 +43,15 @@
             line-height: 22px;
             color: $black;
             margin: 12px 0;
+            span {
+                @media screen and (min-width: 400px) {
+                    display: block;
+                }
+            }
+            @media screen and (min-width: 580px) {
+                font-size: 22px;
+                line-height: 32px;
+            }
         }
     }
     .Image {
@@ -43,11 +60,28 @@
         img {
             width: 100%;
         }
+        @media screen and (min-width: 400px) {
+            width: 100%;
+        }
     }
     .selections {
         background-color: $optionBg;
         width: 100%;
         padding: 12px;
+        border-radius: 10px;
+        @media screen and (min-width: 580px) {
+            padding: 20px 20px;
+            .select {
+                .search {
+                    padding: 19px 36px !important;
+                }
+                select {
+                    padding: 19px !important;
+                    font-size: 18px !important;
+                    font-weight: 400;
+                }
+            }
+        }
         .select {
             display: flex;
             align-items: center;
@@ -62,9 +96,15 @@
                 padding: 3px;
                 border: none;
                 outline: none;
+                @media screen and (min-width: 330px) {
+                    width: 100%;
+                }
                 &:first-child {
                     border-top-left-radius: 10px;
                     border-bottom-left-radius: 10px;
+                }
+                option{
+                    padding: 1rem;
                 }
             }
         }
