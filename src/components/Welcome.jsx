@@ -1,6 +1,7 @@
 import React from "react";
 import Button from "./Button";
 import Hero from "../assets/heroImg.png";
+import { options } from "../utils/options";
 
 const Welcome = () => {
   return (
@@ -25,10 +26,14 @@ const Welcome = () => {
           </div>
           <Button className="w-full" text="Get Started" />
           <div className="selections">
-            <form action="#">
-              <select id="">
-                <option value=""></option>
-              </select>
+            <form className="select">
+              {options.map(({ name, subOption }) => (
+                <select id={name} key={name}>
+                  {subOption.map((option) => (
+                    <option value={name}>{option}</option>
+                  ))}
+                </select>
+              ))}
             </form>
           </div>
         </div>
