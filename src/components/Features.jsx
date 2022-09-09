@@ -4,14 +4,12 @@ import BookFeature from "./BookFeature";
 
 const Features = () => {
   return (
-    <section>
-      <div className="featuresBg">
-        <div className="contain">
-          <div className="featureContent">
-            {featuresData.map((item, index) => (
-              <BookFeature key={index} item={item} />
-            ))}
-          </div>
+    <section className="featuresBg">
+      <div className="contain">
+        <div className="featureContent">
+          {featuresData.map((item, index) => (
+            <BookFeature key={index} item={item} />
+          ))}
         </div>
       </div>
     </section>
