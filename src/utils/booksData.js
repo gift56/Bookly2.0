@@ -23,6 +23,16 @@ export const featuresData = [
         bookText: "Exam Focus Physics",
         price: "3000",
       },
+      {
+        img: governBook,
+        bookText: "New Government Book",
+        price: "3000",
+      },
+      {
+        img: historyBook,
+        bookText: "Basic History book",
+        price: "3000",
+      },
     ],
   },
 ];
