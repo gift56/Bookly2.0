@@ -42,6 +42,17 @@
                         flex-direction: column;
                         align-items: center;
                         justify-content: center;
+                        .bookName,
+                        .bookPrice {
+                            font-size: 18px;
+                            font-weight: 700;
+                        }
+                    }
+                    .Add{
+                        background-color: $btnbg;
+                        border-color: $btnbg;
+                        border-radius: 0;
+                        font-size: 15px;
                     }
                 }
             }
