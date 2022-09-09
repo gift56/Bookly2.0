@@ -3,9 +3,9 @@ import Button from "./Button";
 
 const BookFeature = ({ item }) => {
   return (
-    <div className="bookDetails">
+    <div className="bookDetails scroll-hide">
       <h2>{item.title}</h2>
-      <div className="bookCard scrollbar-hide">
+      <div className="bookCard scroll-hide">
         {item.books.map((book, index) => (
           <div key={index} className="bookContent">
             <img src={book.img} alt="img" />
