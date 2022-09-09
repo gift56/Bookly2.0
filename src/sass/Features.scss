@@ -16,6 +16,9 @@
             h2 {
                 font-size: 25px;
                 font-weight: 700;
+                @media screen and (min-width: 919px) {
+                    font-size: 35px;
+                }
             }
             .bookCard {
                 display: flex;
@@ -24,8 +27,6 @@
                 gap: 4rem;
                 width: 100%;
                 height: 100%;
-                overflow: hidden;
-                overflow-x: scroll;
                 white-space: nowrap;
                 .bookContent {
                     display: flex;
@@ -48,7 +49,7 @@
                             font-weight: 700;
                         }
                     }
-                    .Add{
+                    .Add {
                         background-color: $btnbg;
                         border-color: $btnbg;
                         border-radius: 0;
