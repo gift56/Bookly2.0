@@ -1,6 +1,27 @@
 .featuresBg {
     background-color: $btnbg3;
     font-family: $font1;
+    position: relative;
+    .leftArrow {
+        position: absolute;
+        top: 45%;
+        left: 77px;
+        z-index: 111;
+        border: 2px solid $white;
+        border-radius: 100%;
+        cursor: pointer;
+        color: $white;
+    }
+    .rightArrow {
+        position: absolute;
+        top: 45%;
+        right: 77px;
+        z-index: 111;
+        border: 2px solid $white;
+        border-radius: 100%;
+        cursor: pointer;
+        color: $white;
+    }
     .featureContent {
         display: flex;
         align-items: flex-start;
@@ -27,6 +48,8 @@
                 gap: 4rem;
                 width: 100%;
                 height: 100%;
+                overflow-x: scroll;
+                scroll-behavior: smooth;
                 white-space: nowrap;
                 .bookContent {
                     display: flex;
