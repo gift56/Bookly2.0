@@ -9,8 +9,10 @@ const BookFeature = ({ item }) => {
         {item.books.map((book, index) => (
           <div key={index} className="bookContent">
             <img src={book.img} alt="img" />
-            <p className="bookName">{book.bookText}</p>
-            <p className="bookPrice">&#x20A6; {book.price}</p>
+            <div className="priceDetails">
+                <p className="bookName">{book.bookText}</p>
+                <p className="bookPrice">&#x20A6; {book.price}</p>
+            </div>
             <Button text="ADD TO CART" className="Add" />
           </div>
         ))}
