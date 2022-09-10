@@ -10,8 +10,8 @@ const Footer = () => {
     "Senior School 1",
     "Senior School 2",
     "Senior School 3",
-    "Senior School 1",
     "Senior School 2",
+    "Senior School 1",
   ];
   return (
     <footer>
