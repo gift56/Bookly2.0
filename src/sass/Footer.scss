@@ -53,6 +53,21 @@ footer {
                         display: block;
                     }
                 }
+                h3 {
+                    font-weight: 700;
+                    font-size: 22px;
+                    line-height: 30px;
+                }
+                .list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    li {
+                        font-weight: 600;
+                        font-size: 15px;
+                        line-height: 15px;
+                    }
+                }
             }
         }
     }
