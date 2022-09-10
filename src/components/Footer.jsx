@@ -3,7 +3,7 @@ import FooterLg from "../assets/ftLg.png";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 
 const Footer = () => {
-  const catergoriesLink = [
+  const catergoriesLinks = [
     "Senior School 1",
     "Senior School 2",
     "Senior School 3",
@@ -39,7 +39,11 @@ const Footer = () => {
             </div>
             <div className="footerCol">
               <h3>Catatogues</h3>
-              <ul></ul>
+              <ul className="list">
+                {catergoriesLinks.map((link) => (
+                  <li key={link}>{link}</li>
+                ))}
+              </ul>
             </div>
           </div>
         </div>
