@@ -47,7 +47,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-            <div className="footerCol">
+            <div className="footerCol mt-8">
               <h3>Contact Us</h3>
               <div className="adress">
                 <div className="firstP">
@@ -60,7 +60,7 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="footerCol">
+            <div className="footerCol mt-8">
               <h3>Subscribe Us</h3>
               <form>
                 <input type="email" placeholder="Enter your email" />

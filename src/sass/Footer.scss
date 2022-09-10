@@ -31,6 +31,8 @@ footer {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 20px;
+            margin: 0 auto;
+
             @media screen and (max-width: 310px) {
                 grid-template-columns: 1fr;
             }
@@ -116,6 +118,17 @@ footer {
                         }
                     }
                 }
+            }
+        }
+        .copyrite{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            color: $white;
+            p{
+                font-size: 8px;
+                font-weight: 300;
             }
         }
     }
