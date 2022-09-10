@@ -1,7 +1,18 @@
 import React from "react";
+import FooterLg from "../assets/ftLg.png";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 
 const Footer = () => {
+  const catergoriesLink = [
+    "Senior School 1",
+    "Senior School 2",
+    "Senior School 3",
+    "Senior School 1",
+    "Senior School 2",
+    "Senior School 3",
+    "Senior School 1",
+    "Senior School 2",
+  ];
   return (
     <footer>
       <div className="contain">
@@ -11,6 +22,25 @@ const Footer = () => {
               <HiOutlineChevronDoubleUp />
               <span>BACK TO TOP</span>
             </a>
+          </div>
+          <div className="footerRows">
+            <div className="footerCol">
+              <div className="ftLogo">
+                <img src={FooterLg} alt="footerLg" />
+              </div>
+              <p>
+                <span>Lorem ipsum dolor sit</span>
+                <span>consectetur adipiscing</span>
+                <span>sed do eiusmod tempor</span>
+                <span>incididunt ut labore et</span>
+                <span>magna aliqua. Ut enim</span>
+                <span> minim veniam.</span>
+              </p>
+            </div>
+            <div className="footerCol">
+              <h3>Catatogues</h3>
+              <ul></ul>
+            </div>
           </div>
         </div>
       </div>
