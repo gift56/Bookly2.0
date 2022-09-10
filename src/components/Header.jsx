@@ -7,7 +7,7 @@ import Button from "./Button";
 const Header = () => {
   const [show, setShow] = useState(false);
   return (
-    <header>
+    <header id="Home">
       <nav className="contain desktopNav">
         <div className="logo">
           <img src={Logo} alt="logo" />
