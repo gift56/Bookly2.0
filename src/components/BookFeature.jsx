@@ -1,11 +1,11 @@
 import React from "react";
 import Button from "./Button";
 
-const BookFeature = ({ item }) => {
+const BookFeature = ({ item, rowId, title }) => {
   return (
     <div className="bookDetails scroll-hide">
-      <h2>{item.title}</h2>
-      <div className="bookCard" id={`slideShow`}>
+      <h2>{title}</h2>
+      <div className="bookCard" id={"slideShow" + rowId}>
         {item.books.map((book, index) => (
           <div key={index} className="bookContent">
             <img src={book.img} alt="img" />

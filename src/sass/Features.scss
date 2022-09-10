@@ -2,25 +2,42 @@
     background-color: $btnbg3;
     font-family: $font1;
     position: relative;
+    .buttonShow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 60px;
+        .show {
+            background-color: $btnbg;
+            border-color: $btnbg;
+            border-radius: 3px;
+        }
+    }
     .leftArrow {
         position: absolute;
-        top: 45%;
+        top: 271px;
         left: 77px;
         z-index: 111;
         border: 2px solid $white;
         border-radius: 100%;
         cursor: pointer;
         color: $white;
+        @media screen and (max-width: 400px) {
+            left: 0;
+        }
     }
     .rightArrow {
         position: absolute;
-        top: 45%;
+        top: 271px;
         right: 77px;
         z-index: 111;
         border: 2px solid $white;
         border-radius: 100%;
         cursor: pointer;
         color: $white;
+        @media screen and (max-width: 400px) {
+            right: 0;
+        }
     }
     .featureContent {
         display: flex;
@@ -51,6 +68,9 @@
                 overflow-x: scroll;
                 scroll-behavior: smooth;
                 white-space: nowrap;
+                @media screen and (max-width: 500px) {
+                    gap: 1rem;
+                }
                 .bookContent {
                     display: flex;
                     flex-direction: column;

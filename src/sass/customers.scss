@@ -1,0 +1,70 @@
+.customersCon {
+    font-family: $font1;
+    position: relative;
+    .wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 12px;
+        margin-top: 20px;
+        .titleArea {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 31px;
+            @media screen and (max-width: 280px) {
+                line-height: 20px;
+                font-size: 13px;
+            }
+            h2 {
+                span {
+                    display: block;
+                    color: $btnbg;
+                }
+            }
+        }
+        .cardContainer {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            width: 100%;
+            align-items: flex-start;
+            .cardBody {
+                background-color: $white;
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                padding: 2rem 1rem;
+                width: 100%;
+                border-radius: 3px;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+                justify-content: flex-start;
+                p {
+                    color: $btnbg3;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 27px;
+                    span {
+                        display: block;
+                    }
+                    @media screen and (min-width: 370px) {
+                        font-size: 20px;
+                        span{
+                            display: inline;
+                        }
+                    }
+                }
+                h3 {
+                    font-weight: 700;
+                    font-size: 17px;
+                    line-height: 27px;
+                    @media screen and (min-width: 370px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import Customers from "../components/Customers";
 import Features from "../components/Features";
 import Header from "../components/Header";
 import Welcome from "../components/Welcome";
@@ -9,7 +10,9 @@ const Home = () => {
     <>
       <Header />
       <Welcome />
-      <Features />
+      <Features rowId="1" title="Top Features" />
+      <Features rowId="2" title="New Arrivals" />
+      <Customers />
     </>
   );
 };
