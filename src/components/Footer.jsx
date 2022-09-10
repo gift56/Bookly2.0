@@ -1,6 +1,8 @@
 import React from "react";
 import FooterLg from "../assets/ftLg.png";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
+import { BsArrowRight } from "react-icons/bs";
+import Button from "./Button";
 
 const Footer = () => {
   const catergoriesLinks = [
@@ -19,7 +21,7 @@ const Footer = () => {
         <div className="footerWrap">
           <div className="backtoTop">
             <a href="#Home">
-              <HiOutlineChevronDoubleUp />
+              <HiOutlineChevronDoubleUp size={30} />
               <span>BACK TO TOP</span>
             </a>
           </div>
@@ -45,6 +47,30 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
+            <div className="footerCol">
+              <h3>Contact Us</h3>
+              <div className="adress">
+                <div className="firstP">
+                  <p>543, Duke Avenue</p>
+                  <p>Chicago, USA.</p>
+                </div>
+                <div className="secondP">
+                  <p>+919 406 1234</p>
+                  <p>dallaspizzaz@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            <div className="footerCol">
+              <h3>Subscribe Us</h3>
+              <form>
+                <input type="email" />
+                <Button text={<BsArrowRight />} className="" />
+              </form>
+            </div>
+          </div>
+          <div className="copyrite">
+            <p>&copy; Copyright 2022. All rights reserved.</p>
+            <p>Made from all the goodness in the dough.</p>
           </div>
         </div>
       </div>
