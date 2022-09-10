@@ -63,8 +63,8 @@ const Footer = () => {
             <div className="footerCol">
               <h3>Subscribe Us</h3>
               <form>
-                <input type="email" />
-                <Button text={<BsArrowRight />} className="" />
+                <input type="email" placeholder="Enter your email" />
+                <Button text={<BsArrowRight className="icon" />} className="arrowSub" />
               </form>
             </div>
           </div>
