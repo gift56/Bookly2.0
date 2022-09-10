@@ -4,6 +4,13 @@
     .circleCon {
         position: absolute;
         top: -45px;
+        @media screen and (min-width: 919px) {
+            width: 49px;
+            top: -85px;
+            img {
+                width: 100%;
+            }
+        }
     }
     .wrapper {
         display: flex;
