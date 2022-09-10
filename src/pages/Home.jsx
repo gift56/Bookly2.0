@@ -1,6 +1,7 @@
 import React from "react";
 import Customers from "../components/Customers";
 import Features from "../components/Features";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Partners from "../components/Partners";
 import Welcome from "../components/Welcome";
@@ -15,6 +16,7 @@ const Home = () => {
       <Features rowId="2" title="New Arrivals" />
       <Customers />
       <Partners />
+      <Footer />
     </>
   );
 };
