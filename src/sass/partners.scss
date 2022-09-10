@@ -1,4 +1,38 @@
 .partners{
     background-color: $btnbg2;
     font-family: $font1;
+    .partnersCon{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 1rem;
+        h2{
+            color: $white;
+            font-size: 22px;
+            font-weight: 600;
+        }
+        .clientsCon{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            background-color: $white;
+            border-radius: 12px;
+            width: 100%;
+            padding: 10px 0;
+            .images{
+                width: 350px;
+                img{
+                    width: 100%;
+                }
+                &:nth-child(4){
+                    display: none;
+                }
+                &:nth-child(3){
+                    display: none;
+                }
+            }
+        }
+    }
 }
