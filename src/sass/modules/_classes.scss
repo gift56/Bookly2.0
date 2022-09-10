@@ -52,6 +52,9 @@ section {
         display: none;
     }
 }
-.mt-8{
+.mt-8 {
     margin-top: 40px;
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+    }
 }
