@@ -1,6 +1,10 @@
 .customersCon {
     font-family: $font1;
     position: relative;
+    .circleCon {
+        position: absolute;
+        top: -45px;
+    }
     .wrapper {
         display: flex;
         align-items: flex-start;
