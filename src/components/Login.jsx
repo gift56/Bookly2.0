@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import Image from "../images/loginImg.svg";
+import Image from "../assets/loginImg.svg";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { CgCloseO } from "react-icons/cg";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
+import Button from "./Button";
 
 const Login = () => {
   const [eye, setEye] = useState(false);
