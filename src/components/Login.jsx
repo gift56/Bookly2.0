@@ -8,9 +8,13 @@ const Login = () => {
     <div>
       <div className="contain">
         <div className="formWrapper">
-            <div className="formHeader">
-                
+          <div className="formHeader">
+            <div className="titleArea">
+              <HiOutlineUserCircle />
+              <h2>LOGIN</h2>
             </div>
+            <CgCloseO />
+          </div>
         </div>
       </div>
     </div>
