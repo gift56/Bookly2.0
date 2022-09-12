@@ -54,6 +54,37 @@
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
+            .myForm {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                width: 100%;
+                .formControl {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.25rem;
+                    position: relative;
+                    label {
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+                    input {
+                        background: #ffffff;
+                        border: 1px solid #000000;
+                        border-radius: 12px;
+                        height: 40px;
+                        outline: none;
+                        font-size: 15px;
+                        font-weight: 500;
+                        padding-left: 12px;
+                    }
+                    .show {
+                        position: absolute;
+                        right: 11px;
+                        top: 36px;
+                    }
+                }
+            }
         }
 
         .rightSide {
