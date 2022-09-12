@@ -5,6 +5,7 @@ import { CgCloseO } from "react-icons/cg";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 import Button from "./Button";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   const [eye, setEye] = useState(false);
@@ -23,7 +24,11 @@ const Login = () => {
                 <HiOutlineUserCircle />
                 <h2>LOGIN</h2>
               </div>
-              <CgCloseO className="closeIcon" />
+              <div>
+                <Link to="/">
+                  <CgCloseO className="closeIcon" />
+                </Link>
+              </div>
             </div>
             <p>Hi User, Welcome back to Bookly! We missed you</p>
           </div>
@@ -54,7 +59,7 @@ const Login = () => {
                 </div>
                 <Button text="Submit" className="submit" />
                 <p>
-                  Don’t have an account? <a href="#signUp">Sign Up</a>
+                  Don’t have an account? <Link to="/getstarted">Sign Up</Link>
                 </p>
               </form>
             </div>

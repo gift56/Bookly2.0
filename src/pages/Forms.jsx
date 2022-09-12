@@ -6,7 +6,7 @@ import "../sass/form.scss";
 const Forms = () => {
   return (
     <div>
-      <Header btnText="Get started" />
+      <Header btnText="get started" linkText="getstarted" />
       <Login />
     </div>
   );

@@ -59,6 +59,7 @@ header {
     .loginbtn {
         background-color: $btnbg;
         border-color: $btnbg;
+        text-transform: capitalize;
         &:hover {
             opacity: 0.5;
         }

@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import Hero from "../assets/heroImg.png";
 import { options } from "../utils/options";
+import { Link } from "react-router-dom";
 
 const Welcome = () => {
   return (
@@ -19,7 +20,9 @@ const Welcome = () => {
               <span>magni dolores eos qui ratione voluptatem</span>
               <span>sequi nesciunt.</span>
             </p>
-            <Button className="none" text="Get Started" />
+            <Link to="/login">
+              <Button className="none" text="Get Started" />
+            </Link>
           </div>
           <div className="Image">
             <img src={Hero} alt="/" />

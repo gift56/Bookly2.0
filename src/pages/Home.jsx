@@ -10,7 +10,7 @@ import "../sass/Header.scss";
 const Home = () => {
   return (
     <>
-      <Header btnText="Login" />
+      <Header btnText="login" linkText="login" />
       <Welcome />
       <Features rowId="1" title="Top Features" />
       <Features rowId="2" title="New Arrivals" />

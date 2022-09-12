@@ -10,7 +10,7 @@ const Pages = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Forms />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route path="/getstarted" element={<SignUp />} />
       </Routes>
     </>
   );
