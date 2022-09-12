@@ -166,11 +166,15 @@
                     background-color: #e77d2c;
                     border-color: #e77d2c;
                     width: 100%;
+                    border-radius: 10px;
                 }
                 p {
-                    font-size: 18px;
+                    font-size: 16px;
                     text-align: center;
                     font-weight: 600;
+                    @media screen and (min-width: 919px) {
+                        font-size: 18px;
+                    }
                     a {
                         color: #e77d2c;
                     }
