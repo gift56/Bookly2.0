@@ -7,6 +7,7 @@ import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 
 const Login = () => {
   const [eye, setEye] = useState(false);
+  const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
 
   const showPassword = () => {
     setEye(!eye);
@@ -59,6 +60,13 @@ const Login = () => {
             <div className="rightSide">
               <img src={Image} alt="/" />
             </div>
+          </div>
+          <div className="formFooter">
+            {footerLinks.map((links, index) => (
+              <div className="linkCard" key={index}>
+                {links}
+              </div>
+            ))}
           </div>
         </div>
       </div>
