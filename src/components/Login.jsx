@@ -2,6 +2,7 @@ import React from "react";
 import Image from "../images/loginImg.svg";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { CgCloseO } from "react-icons/cg";
+import { BsEyeSlash, BsEye } from "react-icons/bs";
 
 const Login = () => {
   return (
@@ -17,6 +18,12 @@ const Login = () => {
               <CgCloseO className="closeIcon" />
             </div>
             <p>Hi User, Welcome back to Bookly! We missed you</p>
+          </div>
+          <div className="formContainer">
+            <div className="leftSide"></div>
+            <div className="rightSide">
+              <img src={Image} alt="/" />
+            </div>
           </div>
         </div>
       </div>
