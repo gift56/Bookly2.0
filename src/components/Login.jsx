@@ -52,7 +52,7 @@ const Login = () => {
                   </div>
                   <a href="#login">Forgot Password?</a>
                 </div>
-                <button className="submit">Submit</button>
+                <Button text="Submit" className="submit" />
                 <p>
                   Don’t have an account? <a href="#signUp">Sign Up</a>
                 </p>
