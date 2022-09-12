@@ -62,11 +62,14 @@ const Login = () => {
             </div>
           </div>
           <div className="formFooter">
-            {footerLinks.map((links, index) => (
-              <div className="linkCard" key={index}>
-                {links}
-              </div>
-            ))}
+            <h4>Or continue with</h4>
+            <div className="footerLinks">
+              {footerLinks.map((links, index) => (
+                <div className="linkCard" key={index}>
+                  {links}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
