@@ -23,11 +23,17 @@
                 h2 {
                     font-size: 30px;
                     font-weight: 700;
+                    @media screen and (min-width: 1200px) {
+                        font-size: 40px;
+                    }
                 }
             }
             .closeIcon {
                 font-size: 30px;
                 cursor: pointer;
+                @media screen and (min-width: 1200px) {
+                    font-size: 35px;
+                }
             }
         }
         p {
