@@ -42,12 +42,19 @@
             line-height: 21px;
         }
     }
-    .formContainer{
+    .formContainer {
         display: flex;
         flex-direction: column;
         gap: 1rem;
         justify-content: center;
         align-items: center;
         margin-top: 20px;
+
+        .rightSide {
+            width: 290px;
+            img {
+                width: 100%;
+            }
+        }
     }
 }
