@@ -43,8 +43,11 @@ const Login = () => {
                   </div>
                 </div>
                 <div className="rememeberArea">
-                  <input type="checkbox" id="check" />
-                  <label htmlFor="check">Remember password</label>
+                  <div className="remaind">
+                    <input type="checkbox" id="check" />
+                    <label htmlFor="check">Remember password</label>
+                  </div>
+                  <a href="#login">Forgot Password?</a>
                 </div>
               </form>
             </div>
