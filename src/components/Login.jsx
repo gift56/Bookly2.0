@@ -14,7 +14,7 @@ const Login = () => {
                 <HiOutlineUserCircle />
                 <h2>LOGIN</h2>
               </div>
-              <CgCloseO />
+              <CgCloseO className="closeIcon" />
             </div>
             <p>Hi User, Welcome back to Bookly! We missed you</p>
           </div>

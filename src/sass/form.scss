@@ -1,17 +1,39 @@
 .formWrapper {
     width: 90%;
     margin: 0 auto;
+    margin-top: 30px;
     .formHeader {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         gap: 1rem;
-        .titleArea{
+        .titleArea {
             display: flex;
             justify-content: space-between;
             align-items: center;
             width: 100%;
+            .title {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                svg {
+                    font-size: 25px;
+                }
+                h2 {
+                    font-size: 30px;
+                    font-weight: 700;
+                }
+            }
+            .closeIcon {
+                font-size: 30px;
+                cursor: pointer;
+            }
+        }
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 21px;
         }
     }
 }
