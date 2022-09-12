@@ -1,0 +1,60 @@
+@import "./varibles";
+
+.contain {
+    width: 80%;
+    margin: 0 auto;
+    @media screen and (max-width: 1120px) {
+        width: 90%;
+    }
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    width: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+}
+.buttons {
+    font-size: 18px;
+    color: $white;
+    padding: 10px 40px;
+    transition: all 500ms ease;
+    border-radius: 20px;
+    outline: none;
+    border: 1px solid;
+    cursor: pointer;
+    font-family: $font2;
+}
+.left {
+    left: -100% !important;
+}
+.normal {
+    left: 0 !important;
+}
+.pb {
+    margin-bottom: 15px;
+}
+.none {
+    display: none;
+    @media screen and (min-width: 919px) {
+        display: block;
+    }
+}
+.w-full {
+    width: 100%;
+}
+section {
+    padding: 30px 0;
+}
+.scroll-hide {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+.mt-8 {
+    margin-top: 40px;
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+    }
+}
