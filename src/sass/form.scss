@@ -35,9 +35,9 @@
                 height: 60px;
                 border-radius: 10px;
                 cursor: pointer;
-                &:hover{
+                &:hover {
                     background-color: $black;
-                    svg{
+                    svg {
                         color: $white;
                     }
                 }
@@ -87,14 +87,17 @@
             }
         }
         p {
-            font-size: 18px;
+            font-size: 11px;
             font-weight: 300;
             line-height: 21px;
+            @media screen and (min-width: 568px) {
+                font-size: 18px;
+            }
         }
     }
     .formContainer {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 2rem;
         justify-content: center;
         align-items: center;
@@ -107,6 +110,11 @@
             display: flex;
             align-items: flex-start;
             justify-content: flex-start;
+            .signup {
+                @media screen and (min-width: 1200px) {
+                    gap: 1rem !important;
+                }
+            }
             .myForm {
                 display: flex;
                 flex-direction: column;
@@ -127,8 +135,8 @@
                         font-weight: 400;
                     }
                     input {
-                        background: #ffffff;
-                        border: 1px solid #000000;
+                        background: $white;
+                        border: 1px solid $black;
                         border-radius: 12px;
                         height: 40px;
                         outline: none;
@@ -140,6 +148,7 @@
                         position: absolute;
                         right: 11px;
                         top: 40px;
+                        cursor: pointer;
                     }
                 }
                 .rememeberArea {
@@ -184,7 +193,20 @@
                         font-size: 18px;
                     }
                     a {
-                        color: #e77d2c;
+                        color: $btnbg;
+                    }
+                }
+                .terms {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 25px;
+                    text-align: left;
+                    span{
+                        color: $btnbg;
+                    }
+                    @media screen and (min-width: 768px) {
+                        font-size: 20px;
+                        line-height: 30px;
                     }
                 }
             }

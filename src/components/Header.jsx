@@ -35,13 +35,15 @@ const Header = ({ btnText, linkText }) => {
       </nav>
       <nav className={`mobileNav ${show ? "normal" : "left"}`}>
         <ul className="ul">
-          <li>Home</li>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
           <li>Categories</li>
           <li>Request a book</li>
           <li>
             Cart <img src={cart} alt="/" />
           </li>
-          <Link to="/login">
+          <Link to={`/${linkText}`}>
             <Button text={btnText} className="loginbtn pb" />
           </Link>
         </ul>
