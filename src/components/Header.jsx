@@ -4,7 +4,7 @@ import Logo from "../assets/logo.png";
 import cart from "../assets/cart.png";
 import Button from "./Button";
 
-const Header = () => {
+const Header = ({ btnText }) => {
   const [show, setShow] = useState(false);
   return (
     <header id="Home">
@@ -20,7 +20,7 @@ const Header = () => {
           <li>
             Cart <img src={cart} alt="/" />
           </li>
-          <Button text="Login" className="loginbtn" />
+          <Button text={btnText} className="loginbtn" />
         </ul>
         <div onClick={() => setShow((prev) => !prev)} className="toggle">
           {show ? <FaTimes size={30} /> : <FaBars size={30} />}
@@ -34,7 +34,7 @@ const Header = () => {
           <li>
             Cart <img src={cart} alt="/" />
           </li>
-          <Button text="Login" className="loginbtn pb" />
+          <Button text={btnText} className="loginbtn pb" />
         </ul>
       </nav>
     </header>
