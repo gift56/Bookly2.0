@@ -10,10 +10,13 @@ const Login = () => {
         <div className="formWrapper">
           <div className="formHeader">
             <div className="titleArea">
-              <HiOutlineUserCircle />
-              <h2>LOGIN</h2>
+              <div className="title">
+                <HiOutlineUserCircle />
+                <h2>LOGIN</h2>
+              </div>
+              <CgCloseO />
             </div>
-            <CgCloseO />
+            <p>Hi User, Welcome back to Bookly! We missed you</p>
           </div>
         </div>
       </div>
