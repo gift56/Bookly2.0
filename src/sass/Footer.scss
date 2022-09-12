@@ -133,6 +133,8 @@ footer {
                         }
                         @media screen and (min-width: 952px) {
                             padding-left: 19px;
+                            padding-top: 14px;
+                            padding-bottom: 14px;
                             font-size: 14px;
                             &::placeholder {
                                 font-size: 14px;
@@ -147,10 +149,13 @@ footer {
                         justify-content: center;
                         border-radius: 10px;
                         @media screen and (min-width: 768px) {
-                            padding: 8px 18px;
+                            padding: 12px 18px;
                         }
                         .icon {
                             color: black;
+                            @media screen and (min-width: 768px) {
+                                font-size: 20px;
+                            }
                         }
                     }
                 }
