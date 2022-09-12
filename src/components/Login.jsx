@@ -3,6 +3,7 @@ import Image from "../images/loginImg.svg";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { CgCloseO } from "react-icons/cg";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
+import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 
 const Login = () => {
   const [eye, setEye] = useState(false);
@@ -50,7 +51,9 @@ const Login = () => {
                   <a href="#login">Forgot Password?</a>
                 </div>
                 <button className="submit">Submit</button>
-                <p>Don’t have an account? <a href="#signUp">Sign Up</a></p>
+                <p>
+                  Don’t have an account? <a href="#signUp">Sign Up</a>
+                </p>
               </form>
             </div>
             <div className="rightSide">
