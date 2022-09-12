@@ -133,6 +133,14 @@
                         label {
                             font-size: 14px;
                             font-weight: 400;
+                            @media screen and (min-width: 1200px) {
+                                font-size: 18px;
+                            }
+                        }
+                        @media screen and (min-width: 1200px) {
+                            input {
+                                width: 16px;
+                            }
                         }
                     }
                 }
