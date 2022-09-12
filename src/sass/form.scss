@@ -131,7 +131,7 @@
                     .show {
                         position: absolute;
                         right: 11px;
-                        top: 36px;
+                        top: 40px;
                     }
                 }
                 .rememeberArea {
@@ -142,9 +142,9 @@
                         display: flex;
                         gap: 0.5rem;
                         label {
-                            font-size: 14px;
+                            font-size: 13px;
                             font-weight: 400;
-                            @media screen and (min-width: 1200px) {
+                            @media screen and (min-width: 919px) {
                                 font-size: 18px;
                             }
                         }
@@ -152,6 +152,13 @@
                             input {
                                 width: 16px;
                             }
+                        }
+                    }
+                    a {
+                        text-decoration: underline;
+                        font-size: 13px;
+                        @media screen and (min-width: 919px) {
+                            font-size: 18px;
                         }
                     }
                 }
