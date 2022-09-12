@@ -42,6 +42,10 @@ const Login = () => {
                     )}
                   </div>
                 </div>
+                <div className="rememeberArea">
+                  <input type="checkbox" id="check" />
+                  <label htmlFor="check">Remember password</label>
+                </div>
               </form>
             </div>
             <div className="rightSide">
