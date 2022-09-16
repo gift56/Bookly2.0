@@ -15,6 +15,9 @@ const Reset = () => {
   const [eye, setEye] = useState(false);
   const [confirmEye, setConfirmEye] = useState(false);
   const [showModal, setShowModal] = useState(false);
+  const [newPass, setNewPass] = useState("");
+  const [confirmNewPass, setConfirmNewPass] = useState("");
+  const [error, setError] = useState("");
 
   const showPassword = () => {
     setEye(!eye);
@@ -25,7 +28,16 @@ const Reset = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setShowModal(true);
+    if (newPass | (confirmNewPass === "")) {
+      setError("Please enter all fields");
+    } else if (confirmNewPass !== newPass) {
+      setError("Incorrect!, Please confirm new password");
+    } else {
+      setShowModal(true);
+      setConfirmNewPass("");
+      setNewPass("");
+      setError("");
+    }
   };
 
   return (
@@ -58,9 +70,18 @@ const Reset = () => {
                 </p>
               </div>
               <form className="myForm resetForm" onSubmit={handleSubmit}>
+                {error && (
+                  <span style={{ color: "red", textAlign: "center",textTransform:"capitalize" }}>
+                    {error}
+                  </span>
+                )}
                 <div className="formControl">
                   <label htmlFor="password">Enter New Password</label>
-                  <input type={!eye ? "password" : "text"} />
+                  <input
+                    type={!eye ? "password" : "text"}
+                    value={newPass}
+                    onChange={(e) => setNewPass(e.target.value)}
+                  />
                   <div className="show">
                     {!eye ? (
                       <BsEyeSlash onClick={showPassword} />
@@ -71,7 +92,11 @@ const Reset = () => {
                 </div>
                 <div className="formControl">
                   <label htmlFor="repassword">Confirm New Password</label>
-                  <input type={!confirmEye ? "password" : "text"} />
+                  <input
+                    type={!confirmEye ? "password" : "text"}
+                    value={confirmNewPass}
+                    onChange={(e) => setConfirmNewPass(e.target.value)}
+                  />
                   <div className="show">
                     {!confirmEye ? (
                       <BsEyeSlash onClick={confirmShowPassword} />
@@ -92,9 +117,12 @@ const Reset = () => {
           </div>
         </div>
       </div>
-      <div className={`modal`}>
+      <div className={`modal ${showModal ? "flex" : "d-n"} `}>
         <div className="card">
           <div className="Cardcontainer">
+            <div className="icon" onClick={() => setShowModal(false)}>
+              <CgCloseO className="closeIcon" size={30} />
+            </div>
             <div className="images">
               <div>
                 <img src={PhoneImg} alt="/" />

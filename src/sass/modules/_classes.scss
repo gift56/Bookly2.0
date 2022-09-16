@@ -1,60 +1,158 @@
 @import "./varibles";
 
 .contain {
-    width: 80%;
-    margin: 0 auto;
-    @media screen and (max-width: 1120px) {
-        width: 90%;
-    }
+  width: 80%;
+  margin: 0 auto;
+  @media screen and (max-width: 1120px) {
+    width: 90%;
+  }
 }
 a {
-    text-decoration: none;
-    color: inherit;
-    width: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    font-weight: inherit;
+  text-decoration: none;
+  color: inherit;
+  width: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
 }
 .buttons {
-    font-size: 18px;
-    color: $white;
-    padding: 10px 40px;
-    transition: all 500ms ease;
-    border-radius: 20px;
-    outline: none;
-    border: 1px solid;
-    cursor: pointer;
-    font-family: $font2;
+  font-size: 18px;
+  color: $white;
+  padding: 10px 40px;
+  transition: all 500ms ease;
+  border-radius: 20px;
+  outline: none;
+  border: 1px solid;
+  cursor: pointer;
+  font-family: $font2;
 }
 .left {
-    left: -100% !important;
+  left: -100% !important;
 }
 .normal {
-    left: 0 !important;
+  left: 0 !important;
 }
 .pb {
-    margin-bottom: 15px;
+  margin-bottom: 15px;
+}
+.flex {
+  display: "flex";
+}
+.d-n {
+  display: none;
 }
 .none {
-    display: none;
-    @media screen and (min-width: 919px) {
-        display: block;
-    }
+  display: none;
+  @media screen and (min-width: 919px) {
+    display: block;
+  }
 }
 .w-full {
-    width: 100%;
+  width: 100%;
 }
 section {
-    padding: 30px 0;
+  padding: 30px 0;
 }
 .scroll-hide {
-    ::-webkit-scrollbar {
-        display: none;
-    }
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 .mt-8 {
-    margin-top: 40px;
-    @media screen and (min-width: 768px) {
-        margin-top: 0;
+  margin-top: 40px;
+  @media screen and (min-width: 768px) {
+    margin-top: 0;
+  }
+}
+.modal {
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  text-align: center;
+  place-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000085;
+  z-index: 2;
+  .card {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(76px);
+    @media screen and (max-width: 1369px) {
+      transform: translateY(8%);
     }
+    .Cardcontainer {
+      background-color: $white;
+      width: 670px;
+      height: 604px;
+
+      display: flex;
+      gap: 2rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      border: 1px solid #000000;
+      border-radius: 20px;
+      padding: 2rem 1rem;
+      @media screen and (max-width: 769px) {
+        width: 100%;
+        height: fit-content;
+      }
+      .icon {
+        position: absolute;
+        right: 8px;
+        top: 9px;
+        cursor: pointer;
+      }
+      .images {
+        display: flex;
+        gap: 1.5rem;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 889px) {
+          div {
+            &:first-child {
+              display: none;
+            }
+          }
+        }
+        div {
+          width: 252px;
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .textArea {
+        font-family: $font1;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          font-weight: 400;
+          font-size: 18px;
+          @media screen and (min-width: 769px) {
+            font-size: 30px;
+            line-height: 49px;
+          }
+        }
+        a {
+          font-weight: 400;
+          font-size: 18px;
+          text-decoration: underline;
+          @media screen and (min-width: 769px) {
+            font-size: 20px;
+            line-height: 34px;
+          }
+        }
+      }
+    }
+  }
 }
