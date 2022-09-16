@@ -20,7 +20,6 @@ const ForgetPass = () => {
     if (email === "") {
       setError("please enter this field");
     } else {
-      alert("Move to reset password" + email);
       navigate("/resetpassword");
       setEmail("");
     }
