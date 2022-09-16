@@ -5,248 +5,268 @@
 @import "./modules/classes";
 
 .formWrapper {
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-family: $font1;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-family: $font1;
 
-    .passwordArea {
-        flex-direction: column;
-        gap: 1rem;
-        .titlewelcomeP {
-            display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
-            .title {
-                display: flex;
-                align-items: baseline;
-                gap: 0.5rem;
-                h2{
-                    font-size: 21px;
-                }
-                .icon {
-                    font-size: 20px;
-                }
-            }
-            .paragraph {
-                // font-size: 18px;
-                font-size: 13px;
-                font-weight: 300;
-                span {
-                    display: block;
-                }
-            }
-        }
-    }
-
-    .formFooter {
-        margin-top: 30px;
+  .passwordArea {
+    flex-direction: column;
+    gap: 1rem;
+    .titlewelcomeP {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      .title {
         display: flex;
-        justify-content: center;
         align-items: center;
-        flex-direction: column;
-        gap: 1rem;
-        @media screen and (min-width: 1200px) {
-            margin-bottom: 0 !important;
+        gap: 0.5rem;
+        @media screen and (min-width: 768px) {
+          align-items: baseline;
         }
-        .footerLinks {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 1rem;
-            .linkCard {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border: 1px solid;
-                width: 60px;
-                height: 60px;
-                border-radius: 10px;
-                cursor: pointer;
-                &:hover {
-                    background-color: $black;
-                    svg {
-                        color: $white;
-                    }
-                }
-                &:nth-child(2) {
-                    svg {
-                        font-size: 40px;
-                    }
-                }
-                svg {
-                    font-size: 30px;
-                }
-            }
+        h2 {
+          font-size: 21px;
+          @media screen and (min-width: 768px) {
+            font-size: 30px;
+          }
+          @media screen and (min-width: 1200px) {
+            font-size: 40px;
+          }
         }
+        img {
+          width: 34px;
+        }
+        .icon {
+          font-size: 30px;
+        }
+      }
+      .paragraph {
+        font-size: 13px;
+        font-weight: 300;
+        span {
+          display: block;
+        }
+        @media screen and (min-width: 768px) {
+          font-size: 15px;
+        }
+        @media screen and (min-width: 1150px) {
+          font-size: 18px;
+        }
+      }
     }
-    .formHeader {
+  }
+
+  .formFooter {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 0 !important;
+    }
+    .footerLinks {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      .linkCard {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid;
+        width: 60px;
+        height: 60px;
+        border-radius: 10px;
+        cursor: pointer;
+        &:hover {
+          background-color: $black;
+          svg {
+            color: $white;
+          }
+        }
+        &:nth-child(2) {
+          svg {
+            font-size: 40px;
+          }
+        }
+        svg {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+  .formHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 1rem;
+    .titleArea {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      .title {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        svg {
+          font-size: 25px;
+        }
+        h2 {
+          font-size: 30px;
+          font-weight: 700;
+          @media screen and (min-width: 1200px) {
+            font-size: 40px;
+          }
+        }
+      }
+      .closeIcon {
+        font-size: 30px;
+        cursor: pointer;
+        @media screen and (min-width: 1200px) {
+          font-size: 35px;
+        }
+      }
+    }
+    p {
+      font-size: 11px;
+      font-weight: 300;
+      line-height: 21px;
+      @media screen and (min-width: 568px) {
+        font-size: 18px;
+      }
+    }
+  }
+  .formContainer {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    @media screen and (min-width: 918px) {
+      flex-direction: row;
+    }
+    .leftSide {
+      width: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      .signup {
+        @media screen and (min-width: 1200px) {
+          gap: 1rem !important;
+        }
+      }
+      .myForm {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
         gap: 1rem;
-        .titleArea {
+        width: 100%;
+        @media screen and (min-width: 1200px) {
+          gap: 2rem;
+          width: 80%;
+          max-width: 80%;
+        }
+        .formControl {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+          position: relative;
+          label {
+            font-size: 18px;
+            font-weight: 400;
+          }
+          input {
+            background: $white;
+            border: 1px solid $black;
+            border-radius: 12px;
+            height: 40px;
+            outline: none;
+            font-size: 15px;
+            font-weight: 500;
+            padding-left: 12px;
+          }
+          .show {
+            position: absolute;
+            right: 11px;
+            top: 40px;
+            cursor: pointer;
+          }
+        }
+        .rememeberArea {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .remaind {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            .title {
-                display: flex;
-                align-items: center;
-                gap: 0.5rem;
-                svg {
-                    font-size: 25px;
-                }
-                h2 {
-                    font-size: 30px;
-                    font-weight: 700;
-                    @media screen and (min-width: 1200px) {
-                        font-size: 40px;
-                    }
-                }
+            gap: 0.5rem;
+            label {
+              font-size: 13px;
+              font-weight: 400;
+              @media screen and (min-width: 919px) {
+                font-size: 18px;
+              }
             }
-            .closeIcon {
-                font-size: 30px;
-                cursor: pointer;
-                @media screen and (min-width: 1200px) {
-                    font-size: 35px;
-                }
+            @media screen and (min-width: 1200px) {
+              input {
+                width: 16px;
+              }
             }
+          }
+          a {
+            text-decoration: underline;
+            font-size: 13px;
+            @media screen and (min-width: 919px) {
+              font-size: 18px;
+            }
+          }
+        }
+        .submit {
+          background-color: #e77d2c;
+          border-color: #e77d2c;
+          width: 100%;
+          border-radius: 10px;
         }
         p {
-            font-size: 11px;
-            font-weight: 300;
-            line-height: 21px;
-            @media screen and (min-width: 568px) {
-                font-size: 18px;
-            }
+          font-size: 16px;
+          text-align: center;
+          font-weight: 600;
+          @media screen and (min-width: 919px) {
+            font-size: 18px;
+          }
+          a {
+            color: $btnbg;
+          }
         }
+        .terms {
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 25px;
+          text-align: left;
+          span {
+            color: $btnbg;
+          }
+          @media screen and (min-width: 768px) {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+      }
     }
-    .formContainer {
-        display: flex;
-        flex-direction: column-reverse;
-        gap: 2rem;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        @media screen and (min-width: 918px) {
-            flex-direction: row;
-        }
-        .leftSide {
-            width: 100%;
-            display: flex;
-            align-items: flex-start;
-            justify-content: flex-start;
-            .signup {
-                @media screen and (min-width: 1200px) {
-                    gap: 1rem !important;
-                }
-            }
-            .myForm {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                width: 100%;
-                @media screen and (min-width: 1200px) {
-                    gap: 2rem;
-                    width: 80%;
-                    max-width: 80%;
-                }
-                .formControl {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.25rem;
-                    position: relative;
-                    label {
-                        font-size: 18px;
-                        font-weight: 400;
-                    }
-                    input {
-                        background: $white;
-                        border: 1px solid $black;
-                        border-radius: 12px;
-                        height: 40px;
-                        outline: none;
-                        font-size: 15px;
-                        font-weight: 500;
-                        padding-left: 12px;
-                    }
-                    .show {
-                        position: absolute;
-                        right: 11px;
-                        top: 40px;
-                        cursor: pointer;
-                    }
-                }
-                .rememeberArea {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                    .remaind {
-                        display: flex;
-                        gap: 0.5rem;
-                        label {
-                            font-size: 13px;
-                            font-weight: 400;
-                            @media screen and (min-width: 919px) {
-                                font-size: 18px;
-                            }
-                        }
-                        @media screen and (min-width: 1200px) {
-                            input {
-                                width: 16px;
-                            }
-                        }
-                    }
-                    a {
-                        text-decoration: underline;
-                        font-size: 13px;
-                        @media screen and (min-width: 919px) {
-                            font-size: 18px;
-                        }
-                    }
-                }
-                .submit {
-                    background-color: #e77d2c;
-                    border-color: #e77d2c;
-                    width: 100%;
-                    border-radius: 10px;
-                }
-                p {
-                    font-size: 16px;
-                    text-align: center;
-                    font-weight: 600;
-                    @media screen and (min-width: 919px) {
-                        font-size: 18px;
-                    }
-                    a {
-                        color: $btnbg;
-                    }
-                }
-                .terms {
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 25px;
-                    text-align: left;
-                    span {
-                        color: $btnbg;
-                    }
-                    @media screen and (min-width: 768px) {
-                        font-size: 20px;
-                        line-height: 30px;
-                    }
-                }
-            }
-        }
 
-        .rightSide {
-            width: 100%;
-            @media screen and (min-width: 1200px) {
-                width: 70%;
-            }
-            img {
-                width: 100%;
-            }
-        }
+    .rightSide {
+      width: 100%;
+      @media screen and (min-width: 1050px) {
+        width: 90%;
+      }
+      @media screen and (min-width: 1200px) {
+        width: 70%;
+      }
+      img {
+        width: 100%;
+      }
     }
+  }
 }
