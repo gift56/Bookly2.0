@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Image from "../assets/FPImg.svg";
 import Header from "../components/Header";
 import Button from "../components/Button";
@@ -11,6 +12,7 @@ import "../sass/form.scss";
 const ForgetPass = () => {
   const [email, setEmail] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +21,7 @@ const ForgetPass = () => {
       setError("please enter this field");
     } else {
       alert("Move to reset password" + email);
+      navigate("/resetpassword");
       setEmail("");
     }
   };
