@@ -19,6 +19,7 @@ const ForgetPass = () => {
       setError("please enter this field");
     } else {
       alert("Move to reset password" + email);
+      setEmail("");
     }
   };
   return (
