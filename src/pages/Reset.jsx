@@ -12,6 +12,7 @@ import "../sass/form.scss";
 const Reset = () => {
   const [eye, setEye] = useState(false);
   const [confirmEye, setConfirmEye] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const showPassword = () => {
     setEye(!eye);
@@ -19,6 +20,11 @@ const Reset = () => {
   const confirmShowPassword = () => {
     setConfirmEye(!confirmEye);
   };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <>
       <Header btnText="get started" linkText="getstarted" />
@@ -48,8 +54,7 @@ const Reset = () => {
                   <span>enter the email below.</span>
                 </p>
               </div>
-              <form className="myForm resetForm">
-                {/* onSubmit={handleSubmit} */}
+              <form className="myForm resetForm" onSubmit={handleSubmit}>
                 <div className="formControl">
                   <label htmlFor="password">Enter New Password</label>
                   <input type={!eye ? "password" : "text"} />
