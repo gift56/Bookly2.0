@@ -10,10 +10,15 @@ import "../sass/form.scss";
 
 const ForgetPass = () => {
   const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email.value === "") {
-      
+    setError("");
+    if (email === "") {
+      setError("please enter this field");
+    } else {
+      alert("Move to reset password" + email);
     }
   };
   return (
@@ -48,7 +53,13 @@ const ForgetPass = () => {
               <form className="myForm" onSubmit={handleSubmit}>
                 <div className="formControl">
                   <label htmlFor="email">Email</label>
-                  <input type="email" id="email" value={email} />
+                  <input
+                    type="email"
+                    id="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                  {error && <span>{error}</span>}
                 </div>
                 <Button text="Submit" className="submit" />
                 <p>
