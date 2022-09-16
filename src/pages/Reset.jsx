@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Image from "../assets/resetImg.svg";
+import AvatarGirl from "../assets/avatarImg.svg";
+import PhoneImg from "../assets/phoneImg.svg";
 import PassImg from "../assets/passreset.svg";
 import Button from "../components/Button";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
@@ -23,6 +25,7 @@ const Reset = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setShowModal(true);
   };
 
   return (
@@ -85,6 +88,24 @@ const Reset = () => {
             </div>
             <div className="rightSide">
               <img src={Image} alt="/" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className={`modal`}>
+        <div className="card">
+          <div className="Cardcontainer">
+            <div className="images">
+              <div>
+                <img src={PhoneImg} alt="/" />
+              </div>
+              <div>
+                <img src={AvatarGirl} alt="/" />
+              </div>
+            </div>
+            <div className="textArea">
+              <h3>Password changed successfully!</h3>
+              <Link to="/login">Proceed to Login</Link>
             </div>
           </div>
         </div>
