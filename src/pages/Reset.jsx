@@ -26,7 +26,7 @@ const Reset = () => {
         <div className="formWrapper">
           <div className="formHeader">
             <div className="titleArea">
-              <Link to="/login">
+              <Link to="/forgetpassword">
                 <BsArrowLeftCircle className="closeIcon" />
               </Link>
               <div>
@@ -51,7 +51,7 @@ const Reset = () => {
               <form className="myForm">
                 {/* onSubmit={handleSubmit} */}
                 <div className="formControl">
-                  <label htmlFor="password">Password</label>
+                  <label htmlFor="password">Enter New Password</label>
                   <input type={!eye ? "password" : "text"} />
                   <div className="show">
                     {!eye ? (
@@ -62,7 +62,7 @@ const Reset = () => {
                   </div>
                 </div>
                 <div className="formControl">
-                  <label htmlFor="repassword">Re-enter password</label>
+                  <label htmlFor="repassword">Confirm New Password</label>
                   <input type={!confirmEye ? "password" : "text"} />
                   <div className="show">
                     {!confirmEye ? (
