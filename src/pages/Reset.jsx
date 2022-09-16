@@ -12,6 +12,13 @@ import "../sass/form.scss";
 const Reset = () => {
   const [eye, setEye] = useState(false);
   const [confirmEye, setConfirmEye] = useState(false);
+
+  const showPassword = () => {
+    setEye(!eye);
+  };
+  const confirmShowPassword = () => {
+    setConfirmEye(!confirmEye);
+  };
   return (
     <>
       <Header btnText="get started" linkText="getstarted" />
@@ -44,8 +51,26 @@ const Reset = () => {
               <form className="myForm">
                 {/* onSubmit={handleSubmit} */}
                 <div className="formControl">
-                  <label htmlFor="email">Email</label>
-                  <input type="email" id="email" />
+                  <label htmlFor="password">Password</label>
+                  <input type={!eye ? "password" : "text"} />
+                  <div className="show">
+                    {!eye ? (
+                      <BsEyeSlash onClick={showPassword} />
+                    ) : (
+                      <BsEye onClick={showPassword} />
+                    )}
+                  </div>
+                </div>
+                <div className="formControl">
+                  <label htmlFor="repassword">Re-enter password</label>
+                  <input type={!confirmEye ? "password" : "text"} />
+                  <div className="show">
+                    {!confirmEye ? (
+                      <BsEyeSlash onClick={confirmShowPassword} />
+                    ) : (
+                      <BsEye onClick={confirmShowPassword} />
+                    )}
+                  </div>
                 </div>
                 <Button text="Submit" className="submit" />
                 <p>
