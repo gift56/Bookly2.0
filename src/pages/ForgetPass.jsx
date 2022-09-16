@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "../assets/FPImg.svg";
 import Header from "../components/Header";
 import Button from "../components/Button";
@@ -9,6 +9,13 @@ import { Link } from "react-router-dom";
 import "../sass/form.scss";
 
 const ForgetPass = () => {
+  const [email, setEmail] = useState("");
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (email.value === "") {
+      
+    }
+  };
   return (
     <div>
       <Header btnText="get started" linkText="getstarted" />
@@ -38,10 +45,10 @@ const ForgetPass = () => {
                   <span>will send you a link to reset your password</span>
                 </p>
               </div>
-              <form className="myForm">
+              <form className="myForm" onSubmit={handleSubmit}>
                 <div className="formControl">
                   <label htmlFor="email">Email</label>
-                  <input type="email" />
+                  <input type="email" id="email" value={email} />
                 </div>
                 <Button text="Submit" className="submit" />
                 <p>
