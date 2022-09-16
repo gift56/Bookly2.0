@@ -38,4 +38,4 @@ export const testimonials = [
     ],
     name: "Mr Ogunjobi - Lagos Nigeria",
   },
-];
+]
