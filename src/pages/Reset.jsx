@@ -48,7 +48,7 @@ const Reset = () => {
                   <span>enter the email below.</span>
                 </p>
               </div>
-              <form className="myForm">
+              <form className="myForm resetForm">
                 {/* onSubmit={handleSubmit} */}
                 <div className="formControl">
                   <label htmlFor="password">Enter New Password</label>
