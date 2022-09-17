@@ -15,9 +15,6 @@ const SignUp = () => {
   const [confirmEye, setConfirmEye] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [confirmPass, setConfirmPass] = useState("");
   const [errors, setErrors] = useState("");
   const navigate = useNavigate();
   const { signUp } = UserAuth();
@@ -33,20 +30,12 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (email || password === "") {
-      setErrors("Please enter all fields");
-    } else {
-      const submitEmail = async () => {
-        try {
-          await signUp(email, password);
-          navigate("/");
-        } catch (error) {
-          setErrors(error.message);
-          console.log(error);
-        }
-      };
-      setErrors("");
-      submitEmail();
+    try {
+      await signUp(email, password);
+      navigate("/");
+    } catch (error) {
+      setErrors(error.message);
+      console.log(error);
     }
   };
 
@@ -81,19 +70,11 @@ const SignUp = () => {
                 )}
                 <div className="formControl">
                   <label htmlFor="name">Full Name</label>
-                  <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                  />
+                  <input type="text" />
                 </div>
                 <div className="formControl">
                   <label htmlFor="tel">Mobile Number</label>
-                  <input
-                    type="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                  />
+                  <input type="tel" />
                 </div>
                 <div className="formControl">
                   <label htmlFor="email">Email</label>
@@ -121,11 +102,7 @@ const SignUp = () => {
                 </div>
                 <div className="formControl">
                   <label htmlFor="repassword">Re-enter password</label>
-                  <input
-                    type={!confirmEye ? "password" : "text"}
-                    value={confirmPass}
-                    onChange={(e) => setConfirmPass(e.target.value)}
-                  />
+                  <input type={!confirmEye ? "password" : "text"} />
                   <div className="show">
                     {!confirmEye ? (
                       <BsEyeSlash onClick={confirmShowPassword} />
