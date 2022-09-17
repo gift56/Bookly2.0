@@ -33,12 +33,16 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await signUp(email, password);
-      navigate("/");
-    } catch (error) {
-      setErrors(error);
-      console.log(error);
+    if (name || phone || email || password || confirmPass === "") {
+      setErrors("Please enter all fields");
+    } else {
+      try {
+        await signUp(email, password);
+        navigate("/");
+      } catch (error) {
+        setErrors(error);
+        console.log(error);
+      }
     }
   };
 
@@ -65,6 +69,11 @@ const SignUp = () => {
           </div>
           <div className="formContainer">
             <div className="leftSide">
+              {errors && (
+                <span style={{ textAlign: "left", color: "red" }}>
+                  {errors}
+                </span>
+              )}
               <form className="myForm signup" onSubmit={handleSubmit}>
                 <div className="formControl">
                   <label htmlFor="name">Full Name</label>
