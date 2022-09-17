@@ -34,7 +34,9 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log(fullName, phone, email, password, confirmPassword);
+    if (!email || !password || !fullName || !phone || !confirmPassword) {
+      setErrors("Please enter all fields");
+    }
 
     // try {
     //   await signUp(email, password);
