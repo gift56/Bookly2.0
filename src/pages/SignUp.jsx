@@ -6,15 +6,21 @@ import { CgCloseO } from "react-icons/cg";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 import Button from "../components/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../sass/form.scss";
-
+import { UserAuth } from "../context/AuthContext";
 
 const SignUp = () => {
   const [eye, setEye] = useState(false);
   const [confirmEye, setConfirmEye] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
+  const [errors, setErrors] = useState("");
+  const navigate = useNavigate();
+  const { signUp } = UserAuth();
 
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
 
@@ -23,6 +29,17 @@ const SignUp = () => {
   };
   const confirmShowPassword = () => {
     setConfirmEye(!confirmEye);
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await signUp(email, password);
+      navigate("/");
+    } catch (error) {
+      setErrors(error);
+      console.log(error);
+    }
   };
 
   return (
@@ -48,22 +65,39 @@ const SignUp = () => {
           </div>
           <div className="formContainer">
             <div className="leftSide">
-              <form className="myForm signup">
+              <form className="myForm signup" onSubmit={handleSubmit}>
                 <div className="formControl">
                   <label htmlFor="name">Full Name</label>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
                 </div>
                 <div className="formControl">
                   <label htmlFor="tel">Mobile Number</label>
-                  <input type="tel" />
+                  <input
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
                 </div>
                 <div className="formControl">
                   <label htmlFor="email">Email</label>
-                  <input type="email" />
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    autoComplete="email"
+                  />
                 </div>
                 <div className="formControl">
                   <label htmlFor="password">Password</label>
-                  <input type={!eye ? "password" : "text"} />
+                  <input
+                    type={!eye ? "password" : "text"}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
                   <div className="show">
                     {!eye ? (
                       <BsEyeSlash onClick={showPassword} />
@@ -74,7 +108,11 @@ const SignUp = () => {
                 </div>
                 <div className="formControl">
                   <label htmlFor="repassword">Re-enter password</label>
-                  <input type={!confirmEye ? "password" : "text"} />
+                  <input
+                    type={!confirmEye ? "password" : "text"}
+                    value={confirmPass}
+                    onChange={(e) => setConfirmPass(e.target.value)}
+                  />
                   <div className="show">
                     {!confirmEye ? (
                       <BsEyeSlash onClick={confirmShowPassword} />
