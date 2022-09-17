@@ -69,12 +69,12 @@ const SignUp = () => {
           </div>
           <div className="formContainer">
             <div className="leftSide">
-              {errors && (
-                <span style={{ textAlign: "left", color: "red" }}>
-                  {errors}
-                </span>
-              )}
               <form className="myForm signup" onSubmit={handleSubmit}>
+                {errors && (
+                  <span style={{ textAlign: "left", color: "red" }}>
+                    {errors}
+                  </span>
+                )}
                 <div className="formControl">
                   <label htmlFor="name">Full Name</label>
                   <input
