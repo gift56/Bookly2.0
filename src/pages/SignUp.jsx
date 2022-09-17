@@ -33,16 +33,20 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (name || phone || email || password || confirmPass === "") {
+    if (email || password === "") {
       setErrors("Please enter all fields");
     } else {
-      try {
-        await signUp(email, password);
-        navigate("/");
-      } catch (error) {
-        setErrors(error);
-        console.log(error);
-      }
+      const submitEmail = async () => {
+        try {
+          await signUp(email, password);
+          navigate("/");
+        } catch (error) {
+          setErrors(error.message);
+          console.log(error);
+        }
+      };
+      setErrors("");
+      submitEmail();
     }
   };
 
@@ -104,8 +108,8 @@ const SignUp = () => {
                   <label htmlFor="password">Password</label>
                   <input
                     type={!eye ? "password" : "text"}
-                    value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    value={password}
                   />
                   <div className="show">
                     {!eye ? (
