@@ -8,16 +8,15 @@ import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 import Button from "../components/Button";
 import { Link } from "react-router-dom";
 import "../sass/form.scss";
-import { UserAuth } from "../context/AuthContext";
+
 
 const SignUp = () => {
   const [eye, setEye] = useState(false);
   const [confirmEye, setConfirmEye] = useState(false);
-
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
-
 
   const showPassword = () => {
     setEye(!eye);
