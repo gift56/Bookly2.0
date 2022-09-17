@@ -34,13 +34,8 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    console.log({
-      name: fullName,
-      phone: phone,
-      email: email,
-      password: password,
-      confirmPassword: confirmPassword,
-    });
+    console.log(fullName, phone, email, password, confirmPassword);
+
     // try {
     //   await signUp(email, password);
     //   navigate("/");
