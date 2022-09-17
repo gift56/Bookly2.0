@@ -11,10 +11,13 @@ import "../sass/form.scss";
 import { UserAuth } from "../context/AuthContext";
 
 const SignUp = () => {
-  const [eye, setEye] = useState(false);
-  const [confirmEye, setConfirmEye] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [fullName, setFullName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [eye, setEye] = useState(false);
+  const [confirmEye, setConfirmEye] = useState(false);
   const [errors, setErrors] = useState("");
   const navigate = useNavigate();
   const { signUp } = UserAuth();
@@ -30,13 +33,21 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-      await signUp(email, password);
-      navigate("/");
-    } catch (error) {
-      setErrors(error.message);
-      console.log(error);
-    }
+
+    console.log({
+      name: fullName,
+      phone: phone,
+      email: email,
+      password: password,
+      confirmPassword: confirmPassword,
+    });
+    // try {
+    //   await signUp(email, password);
+    //   navigate("/");
+    // } catch (error) {
+    //   setErrors(error.message);
+    //   console.log(error);
+    // }
   };
 
   return (
@@ -70,11 +81,19 @@ const SignUp = () => {
                 )}
                 <div className="formControl">
                   <label htmlFor="name">Full Name</label>
-                  <input type="text" />
+                  <input
+                    type="text"
+                    value={fullName}
+                    onChange={(e) => setFullName(e.target.value)}
+                  />
                 </div>
                 <div className="formControl">
                   <label htmlFor="tel">Mobile Number</label>
-                  <input type="tel" />
+                  <input
+                    type="tel"
+                    value={phone}
+                    onChange={(e) => setPhone(e.target.value)}
+                  />
                 </div>
                 <div className="formControl">
                   <label htmlFor="email">Email</label>
@@ -101,7 +120,11 @@ const SignUp = () => {
                 </div>
                 <div className="formControl">
                   <label htmlFor="repassword">Re-enter password</label>
-                  <input type={!confirmEye ? "password" : "text"} />
+                  <input
+                    type={!confirmEye ? "password" : "text"}
+                    value={confirmPassword}
+                    onChange={(e) => setConfirmPassword(e.target.value)}
+                  />
                   <div className="show">
                     {!confirmEye ? (
                       <BsEyeSlash onClick={confirmShowPassword} />
