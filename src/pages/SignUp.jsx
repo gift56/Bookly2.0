@@ -21,6 +21,7 @@ const SignUp = () => {
   const [errors, setErrors] = useState("");
   const navigate = useNavigate();
   const { signUp } = UserAuth();
+  let patten = /\S+@\S+\.\S+/;
 
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
 
@@ -34,17 +35,21 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || !password || !fullName || !phone || !confirmPassword) {
-      setErrors("Please enter all fields");
+    try {
+      await signUp(email, password);
+      if (!email || !password || !fullName || !phone || !confirmPassword) {
+        setErrors("Please enter all fields");
+      } else if (password !== confirmPassword) {
+        setErrors("Password does not match !");
+      } else if (!patten.test(values.email)) {
+        setErrors("Invalid Email");
+      } else {
+        navigate("/");
+      }
+    } catch (error) {
+      setErrors(error.message);
+      console.log(error);
     }
-
-    // try {
-    //   await signUp(email, password);
-    //   navigate("/");
-    // } catch (error) {
-    //   setErrors(error.message);
-    //   console.log(error);
-    // }
   };
 
   return (
