@@ -41,7 +41,7 @@ const SignUp = () => {
         setErrors("Please enter all fields");
       } else if (password !== confirmPassword) {
         setErrors("Password does not match !");
-      } else if (patten.test(!email)) {
+      } else if (email.test(patten) !== email) {
         setErrors("Invalid Email");
       } else {
         navigate("/");
