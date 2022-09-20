@@ -36,9 +36,15 @@ const Header = ({ btnText, linkText }) => {
           <li>
             Cart <img src={cart} alt="/" />
           </li>
-          <Link to={`/${linkText}`}>
-            <Button text={btnText} className="loginbtn" />
-          </Link>
+          {user?.email ? (
+            <Link to={`/account`}>
+              <Button text="Account" className="loginbtn" />
+            </Link>
+          ) : (
+            <Link to={`/${linkText}`}>
+              <Button text={btnText} className="loginbtn" />
+            </Link>
+          )}
         </ul>
         <div onClick={() => setShow((prev) => !prev)} className="toggle">
           {show ? <FaTimes size={30} /> : <FaBars size={30} />}
@@ -54,9 +60,15 @@ const Header = ({ btnText, linkText }) => {
           <li>
             Cart <img src={cart} alt="/" />
           </li>
-          <Link to={`/${linkText}`}>
-            <Button text={btnText} className="loginbtn pb" />
-          </Link>
+          {user?.email ? (
+            <Link to={`/account`}>
+              <Button text="Account" className="loginbtn" />
+            </Link>
+          ) : (
+            <Link to={`/${linkText}`}>
+              <Button text={btnText} className="loginbtn" />
+            </Link>
+          )}
         </ul>
       </nav>
     </header>
