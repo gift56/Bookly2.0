@@ -10,6 +10,9 @@ import { UserAuth } from "../context/AuthContext";
 
 const Login = () => {
   const [eye, setEye] = useState(false);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
   const navigate = useNavigate();
   const { logIn } = UserAuth();
@@ -17,6 +20,19 @@ const Login = () => {
   const showPassword = () => {
     setEye(!eye);
   };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError("");
+    try {
+      await logIn(email, password);
+      navigate("/page/account");
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    }
+  };
+
   return (
     <div>
       <div className="contain">
@@ -37,14 +53,25 @@ const Login = () => {
           </div>
           <div className="formContainer">
             <div className="leftSide">
-              <form className="myForm">
+              <form className="myForm" onSubmit={handleSubmit}>
+                {error ? (
+                  <p style={{ color: "red", textAlign: "left" }}>{error}</p>
+                ) : null}
                 <div className="formControl">
                   <label htmlFor="email">Email</label>
-                  <input type="email" />
+                  <input
+                    type="email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    autoComplete="email"
+                  />
                 </div>
                 <div className="formControl">
                   <label htmlFor="password">Password</label>
-                  <input type={!eye ? "password" : "text"} />
+                  <input
+                    type={!eye ? "password" : "text"}
+                    onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="password"
+                  />
                   <div className="show">
                     {!eye ? (
                       <BsEyeSlash onClick={showPassword} />

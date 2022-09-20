@@ -71,7 +71,13 @@ const Reset = () => {
               </div>
               <form className="myForm resetForm" onSubmit={handleSubmit}>
                 {error && (
-                  <span style={{ color: "red", textAlign: "center",textTransform:"capitalize" }}>
+                  <span
+                    style={{
+                      color: "red",
+                      textAlign: "left",
+                      textTransform: "capitalize",
+                    }}
+                  >
                     {error}
                   </span>
                 )}
