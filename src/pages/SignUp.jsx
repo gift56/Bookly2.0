@@ -21,7 +21,7 @@ const SignUp = () => {
   const [errors, setErrors] = useState("");
   const navigate = useNavigate();
   const { signUp } = UserAuth();
-  let patten = /\S+@\S+\.\S+/;
+  // let patten = /\S+@\S+\.\S+/;
 
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
 

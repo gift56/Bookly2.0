@@ -4,9 +4,11 @@ import Logo from "../assets/logo.png";
 import cart from "../assets/cart.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 
 const Header = ({ btnText, linkText }) => {
   const [show, setShow] = useState(false);
+  const {} = UserAuth();
   return (
     <header id="Home">
       <nav className="contain desktopNav">
