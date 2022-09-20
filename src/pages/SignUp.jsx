@@ -42,7 +42,7 @@ const SignUp = () => {
       } else if (password !== confirmPassword) {
         setErrors("Password does not match !");
       } else {
-        navigate("/");
+        navigate("/account");
       }
     } catch (error) {
       setErrors(error.message);
