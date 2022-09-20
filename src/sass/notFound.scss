@@ -1,0 +1,15 @@
+.pageNotfound {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+  height: 60vh;
+  font-family: $font1;
+  span {
+    font-size: 20px;
+    a {
+      color: $btnbg;
+    }
+  }
+}
