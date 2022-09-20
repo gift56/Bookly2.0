@@ -8,7 +8,15 @@ import { UserAuth } from "../context/AuthContext";
 
 const Header = ({ btnText, linkText }) => {
   const [show, setShow] = useState(false);
-  const {} = UserAuth();
+  const { user, logOut } = UserAuth();
+  const handleLogout = async () => {
+    try {
+      await logOut();
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <header id="Home">
       <nav className="contain desktopNav">
