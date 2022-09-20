@@ -3,21 +3,21 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../assets/logo.png";
 import cart from "../assets/cart.png";
 import Button from "./Button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 const Header = ({ btnText, linkText }) => {
   const [show, setShow] = useState(false);
-  const { user, logOut } = UserAuth();
-  const navigate = useNavigate();
-  const handleLogout = async () => {
-    try {
-      await logOut();
-      navigate("/");
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  const { user } = UserAuth();
+
+  // const handleLogout = async () => {
+  //   try {
+  //     await logOut();
+  //     navigate("/");
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
   return (
     <header id="Home">
       <nav className="contain desktopNav">
