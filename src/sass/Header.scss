@@ -44,6 +44,12 @@ header {
         &:hover {
           color: $btnbg;
         }
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
+        }
       }
     }
   }
@@ -90,6 +96,12 @@ header {
         gap: 0.5rem;
         &:hover {
           color: $btnbg;
+        }
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 0.5rem;
         }
       }
     }
