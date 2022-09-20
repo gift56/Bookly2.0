@@ -4,20 +4,10 @@ import Logo from "../assets/logo.png";
 import cart from "../assets/cart.png";
 import Button from "./Button";
 import { Link } from "react-router-dom";
-import { UserAuth } from "../context/AuthContext";
 
 const Header = ({ btnText, linkText }) => {
   const [show, setShow] = useState(false);
-  const { user } = UserAuth();
 
-  // const handleLogout = async () => {
-  //   try {
-  //     await logOut();
-  //     navigate("/");
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
   return (
     <header id="Home">
       <nav className="contain desktopNav">
@@ -38,15 +28,10 @@ const Header = ({ btnText, linkText }) => {
               Cart <img src={cart} alt="/" />
             </Link>
           </li>
-          {user?.email ? (
-            <Link to={`/account`}>
-              <Button text="Account" className="loginbtn" />
-            </Link>
-          ) : (
-            <Link to={`/${linkText}`}>
-              <Button text={btnText} className="loginbtn" />
-            </Link>
-          )}
+
+          <Link to={`/${linkText}`}>
+            <Button text={btnText} className="loginbtn" />
+          </Link>
         </ul>
         <div onClick={() => setShow((prev) => !prev)} className="toggle">
           {show ? <FaTimes size={30} /> : <FaBars size={30} />}
@@ -64,15 +49,9 @@ const Header = ({ btnText, linkText }) => {
               Cart <img src={cart} alt="/" />
             </Link>
           </li>
-          {user?.email ? (
-            <Link to={`/account`}>
-              <Button text="Account" className="loginbtn" />
-            </Link>
-          ) : (
-            <Link to={`/${linkText}`}>
-              <Button text={btnText} className="loginbtn" />
-            </Link>
-          )}
+          <Link to={`/${linkText}`}>
+            <Button text={btnText} className="loginbtn" />
+          </Link>
         </ul>
       </nav>
     </header>
