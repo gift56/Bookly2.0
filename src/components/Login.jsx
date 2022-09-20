@@ -5,11 +5,14 @@ import { CgCloseO } from "react-icons/cg";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 
 const Login = () => {
   const [eye, setEye] = useState(false);
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
+  const navigate = useNavigate();
+  const { logIn } = UserAuth();
 
   const showPassword = () => {
     setEye(!eye);
