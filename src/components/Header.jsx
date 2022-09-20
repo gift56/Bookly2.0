@@ -58,7 +58,9 @@ const Header = ({ btnText, linkText }) => {
           <li>Categories</li>
           <li>Request a book</li>
           <li>
-            Cart <img src={cart} alt="/" />
+            <Link to="/cart">
+              Cart <img src={cart} alt="/" />
+            </Link>
           </li>
           {user?.email ? (
             <Link to={`/account`}>
