@@ -21,8 +21,12 @@ const Header = ({ btnText, linkText }) => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>Categories</li>
-          <li>Request a book</li>
+          <li>
+            <Link to="/catergories">Categories</Link>
+          </li>
+          <li>
+            <Link to="/request">Request a book</Link>
+          </li>
           <li>
             <Link to="/cart">
               Cart <img src={cart} alt="/" />
@@ -42,8 +46,12 @@ const Header = ({ btnText, linkText }) => {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>Categories</li>
-          <li>Request a book</li>
+          <li>
+            <Link to="/catergories">Categories</Link>
+          </li>
+          <li>
+            <Link to="/request">Request a book</Link>
+          </li>
           <li>
             <Link to="/cart">
               Cart <img src={cart} alt="/" />

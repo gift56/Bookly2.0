@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Header from "../components/Header";
 import Image from "../assets/resetImg.svg";
 import AvatarGirl from "../assets/avatarImg.svg";
@@ -33,12 +33,25 @@ const Reset = () => {
     } else if (confirmNewPass !== newPass) {
       setError("Incorrect!, Please confirm new password");
     } else {
+      e.stopPropagation();
       setShowModal(true);
       setConfirmNewPass("");
       setNewPass("");
       setError("");
     }
   };
+
+  const modalRef = useRef();
+
+  useEffect(() => {
+    const resetHeader = (e) => {
+      if (e.path[0] === modalRef.current) {
+        setShowModal(false);
+      }
+    };
+    window.addEventListener("click", resetHeader);
+    return () => window.removeEventListener("click", resetHeader);
+  }, []);
 
   return (
     <>
@@ -123,11 +136,11 @@ const Reset = () => {
           </div>
         </div>
       </div>
-      <div className={`modal ${showModal ? "flex" : "d-n"} `}>
+      <div ref={modalRef} className={`modal  ${showModal ? "flex" : "d-n"} `}>
         <div className="card">
           <div className="Cardcontainer">
-            <div className="icon" onClick={() => setShowModal(false)}>
-              <CgCloseO className="closeIcon" size={30} />
+            <div className="icon">
+              <CgCloseO className="closeIcon" size={30} onClick={() => setShowModal(false)} />
             </div>
             <div className="images">
               <div>

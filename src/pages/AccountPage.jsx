@@ -8,9 +8,23 @@ import "../sass/account.scss";
 
 const AccountPage = () => {
   const [show, setShow] = useState(false);
+  const AccountLinks = [
+    {
+      img: "",
+      name: "My Account",
+    },
+    {
+      img: "",
+      name: "Orders",
+    },
+    {
+      img: "",
+      name: "Saved items",
+    },
+  ];
   return (
     <>
-      <header id="Home">
+      <header id="Home" className="accHead">
         <nav className="contain desktopNav">
           <div className="logo">
             <Link to="/">
@@ -22,8 +36,12 @@ const AccountPage = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>Categories</li>
-            <li>Request a book</li>
+            <li>
+              <Link to="/catergories">Categories</Link>
+            </li>
+            <li>
+              <Link to="/request">Request a book</Link>
+            </li>
             <li>
               <Link to="/cart">
                 Cart <img src={cart} alt="/" />
@@ -40,8 +58,12 @@ const AccountPage = () => {
             <li>
               <Link to="/">Home</Link>
             </li>
-            <li>Categories</li>
-            <li>Request a book</li>
+            <li>
+              <Link to="/catergories">Categories</Link>
+            </li>
+            <li>
+              <Link to="/request">Request a book</Link>
+            </li>
             <li>
               <Link to="/cart">
                 Cart <img src={cart} alt="/" />
@@ -52,7 +74,13 @@ const AccountPage = () => {
         </nav>
         <div className="dropdown">
           <ul className="dropdownList">
-            <Button />
+            <Button text="Log Out" className="loginbtn" />
+            {AccountLinks.map(({ img, name }, index) => (
+              <li key={index}>
+                <img src="" alt="" />
+                <p>{name}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </header>

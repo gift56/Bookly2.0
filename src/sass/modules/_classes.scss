@@ -39,7 +39,7 @@ a {
   display: "flex";
 }
 .d-n {
-  display: none;
+  display: none ;
 }
 .none {
   display: none;
@@ -66,14 +66,13 @@ section {
 }
 .modal {
   justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1111;
   place-items: center;
-  width: 100vw;
-  height: 100vh;
   background-color: #00000085;
   z-index: 2;
   .card {
