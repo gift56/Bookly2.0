@@ -13,15 +13,15 @@ const AcountHeader = () => {
 
   const AccountLinks = [
     {
-      img: "",
+      img: user,
       name: "My Account",
     },
     {
-      img: "",
+      img: order,
       name: "Orders",
     },
     {
-      img: "",
+      img: heart,
       name: "Saved items",
     },
   ];
@@ -81,7 +81,7 @@ const AcountHeader = () => {
         <ul className="dropdownList">
           {AccountLinks.map(({ img, name }, index) => (
             <li key={index}>
-              <img src="" alt="" />
+              <img src={img} alt={name} />
               <p>{name}</p>
             </li>
           ))}
