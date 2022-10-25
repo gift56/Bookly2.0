@@ -6,7 +6,7 @@ import { CgCloseO } from "react-icons/cg";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 import Button from "../components/Button/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
 
 const SignUp = () => {
@@ -23,16 +23,6 @@ const SignUp = () => {
     setConfirmEye(!confirmEye);
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // try {
-    //   await signUp(email, password);
-    // } catch (error) {
-    //   setErrors(error.message);
-    //   console.log(error);
-    // }
-  };
 
   return (
     <div>
