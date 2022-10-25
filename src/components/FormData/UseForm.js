@@ -7,6 +7,9 @@ const Useform = (setShowModal) => {
   const [values, setValue] = useState({
     email: "",
     password: "",
+    name: "",
+    tel: "",
+    confirmPass: "",
   });
 
   const [errors, setErrors] = useState({});
