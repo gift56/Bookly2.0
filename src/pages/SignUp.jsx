@@ -78,8 +78,8 @@ const SignUp = () => {
                 <div className="formControl">
                   <label htmlFor="email">
                     Email
-                    {errors.name && (
-                      <span className={`error`}>{errors.name}</span>
+                    {errors.email && (
+                      <span className={`error`}>{errors.email}</span>
                     )}
                   </label>
                   <input
@@ -89,7 +89,12 @@ const SignUp = () => {
                   />
                 </div>
                 <div className="formControl">
-                  <label htmlFor="password">Password</label>
+                  <label htmlFor="password">
+                    Password
+                    {errors.password ? (
+                      <span className={`error`}>{errors.password}</span>
+                    ) : null}
+                  </label>
                   <input
                     type={!eye ? "password" : "text"}
                     value={values.password}
@@ -105,7 +110,12 @@ const SignUp = () => {
                   </div>
                 </div>
                 <div className="formControl">
-                  <label htmlFor="confirmpassword">Re-enter password</label>
+                  <label htmlFor="confirmpassword">
+                    Re-enter password
+                    {errors.confirmPass ? (
+                      <span className={`error`}>{errors.confirmPass}</span>
+                    ) : null}
+                  </label>
                   <input
                     type={!confirmEye ? "password" : "text"}
                     value={values.confirmPass}
