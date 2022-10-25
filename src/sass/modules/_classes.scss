@@ -7,6 +7,9 @@
     width: 90%;
   }
 }
+.error {
+  color: red;
+}
 a {
   text-decoration: none;
   color: inherit;
@@ -39,7 +42,7 @@ a {
   display: "flex";
 }
 .d-n {
-  display: none ;
+  display: none;
 }
 .none {
   display: none;

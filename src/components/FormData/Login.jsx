@@ -55,7 +55,7 @@ const Login = () => {
             <div className="leftSide">
               <form className="myForm" onSubmit={handleSubmit}>
                 {error ? (
-                  <p style={{ color: "red", textAlign: "left" }}>{error}</p>
+                  <p className="error">{error}</p>
                 ) : null}
                 <div className="formControl">
                   <label htmlFor="email">Email</label>

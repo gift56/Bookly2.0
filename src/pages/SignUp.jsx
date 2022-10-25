@@ -48,7 +48,10 @@ const SignUp = () => {
             <div className="leftSide">
               <form className="myForm signup" onSubmit={handleSubmit}>
                 <div className="formControl">
-                  <label htmlFor="name">Full Name</label>
+                  <label htmlFor="name">
+                    Full Name{" "}
+                    {errors.name && <span className={``}>{errors.name}</span>}
+                  </label>
                   <input
                     type="text"
                     value={values.name}
