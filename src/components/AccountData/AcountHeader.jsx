@@ -9,8 +9,8 @@ import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
 const AcountHeader = () => {
-  const [show, setShow] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  const [show, setShow] = useState(false);
 
   const AccountLinks = [
     {
@@ -45,12 +45,14 @@ const AcountHeader = () => {
           <li>
             <Link to="/request">Request a book</Link>
           </li>
-          <li onClick={() => setDropDown((prev) => !prev)}>
+          <li>
             <Link to="/cart">
               Cart <img src={cart} alt="/" />
             </Link>
           </li>
-          <Button text="My Account" className="loginbtn" />
+          <div onClick={() => setDropDown((prev) => !prev)}>
+            <Button text="My Account" className="loginbtn" />
+          </div>
         </ul>
         <div onClick={() => setShow((prev) => !prev)} className="toggle">
           {show ? <FaTimes size={30} /> : <FaBars size={30} />}
@@ -72,11 +74,9 @@ const AcountHeader = () => {
               Cart <img src={cart} alt="/" />
             </Link>
           </li>
-          <Button
-            text="My Account"
-            className="loginbtn"
-            onClick={() => setDropDown((prev) => !prev)}
-          />
+          <div onClick={() => setDropDown((prev) => !prev)}>
+            <Button text="My Account" className="loginbtn" />
+          </div>
         </ul>
       </nav>
       <div className={`dropdown ${dropDown ? "d_flex" : "d-n"}`}>
