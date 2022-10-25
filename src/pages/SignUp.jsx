@@ -25,6 +25,12 @@ const SignUp = () => {
     setConfirmEye(!confirmEye);
   };
 
+  useEffect(() => {
+    const submitData = async () => {
+      
+    };
+  }, []);
+
   return (
     <div>
       <Header btnText="login" linkText="login" />
