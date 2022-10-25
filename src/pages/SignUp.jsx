@@ -61,7 +61,7 @@ const SignUp = () => {
                     name="name"
                   />
                   {errors.name && (
-                    <p className={`error mobileErr`}>{errors.name}</p>
+                    <p className="error mobileErr">{errors.name}</p>
                   )}
                 </div>
                 <div className="formControl">
@@ -77,8 +77,8 @@ const SignUp = () => {
                     onChange={handleChange}
                     name="tel"
                   />
-                  {errors.name && (
-                    <p className={`error mobileErr`}>{errors.name}</p>
+                  {errors.tel && (
+                    <p className="error mobileErr">{errors.tel}</p>
                   )}
                 </div>
                 <div className="formControl">
@@ -94,8 +94,8 @@ const SignUp = () => {
                     onChange={handleChange}
                     name="email"
                   />
-                  {errors.name && (
-                    <p className={`error mobileErr`}>{errors.name}</p>
+                  {errors.email && (
+                    <p className="error mobileErr">{errors.email}</p>
                   )}
                 </div>
                 <div className="formControl">
@@ -111,7 +111,7 @@ const SignUp = () => {
                     onChange={handleChange}
                     name="password"
                   />
-                  {errors.name && (
+                  {errors.password && (
                     <p className="error mobileErr">{errors.password}</p>
                   )}
                   <div className="show">
