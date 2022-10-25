@@ -71,8 +71,8 @@ const SignUp = () => {
                   <input
                     type="tel"
                     value={values.tel}
-                    name="tel"
                     onChange={handleChange}
+                    name="tel"
                   />
                 </div>
                 <div className="formControl">
