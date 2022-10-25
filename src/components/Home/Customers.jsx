@@ -1,6 +1,6 @@
 import React from "react";
 import { testimonials } from "../../utils/customerData";
-import Circle from "../assets/circle.png";
+import Circle from "../../assets/circle.png";
 import Card from "./Card";
 
 const Customers = () => {
