@@ -2,7 +2,7 @@ import React from "react";
 import Customers from "../components/Customers";
 import Features from "../components/Features";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Partners from "../components/Partners";
 import Welcome from "../components/Welcome";
 import "../sass/Header.scss";
