@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../../assets/logo.png";
 import cart from "../../assets/cart.png";
+import user from "../../assets/user.svg";
+import order from "../../assets/order.svg";
+import heart from "../../assets/heart.svg";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
 
@@ -72,8 +75,10 @@ const AcountHeader = () => {
         </ul>
       </nav>
       <div className="dropdown">
-        <ul className="dropdownList">
+        <div className="button">
           <Button text="Log Out" className="loginbtn" />
+        </div>
+        <ul className="dropdownList">
           {AccountLinks.map(({ img, name }, index) => (
             <li key={index}>
               <img src="" alt="" />
