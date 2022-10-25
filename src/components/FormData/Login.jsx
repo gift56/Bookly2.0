@@ -6,7 +6,7 @@ import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 import Button from "./Button";
 import { Link, useNavigate } from "react-router-dom";
-import { UserAuth } from "../context/AuthContext";
+import { UserAuth } from "../../context/AuthContext";
 
 const Login = () => {
   const [eye, setEye] = useState(false);
