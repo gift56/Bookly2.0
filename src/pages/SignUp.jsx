@@ -11,17 +11,10 @@ import "../sass/form.scss";
 import { UserAuth } from "../context/AuthContext";
 
 const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
   const [eye, setEye] = useState(false);
   const [confirmEye, setConfirmEye] = useState(false);
-  const [errors, setErrors] = useState("");
   const navigate = useNavigate();
   const { signUp } = UserAuth();
-  // let patten = /\S+@\S+\.\S+/;
 
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
 
@@ -37,13 +30,6 @@ const SignUp = () => {
 
     try {
       await signUp(email, password);
-      if (!email || !password || !fullName || !phone || !confirmPassword) {
-        setErrors("Please enter all fields");
-      } else if (password !== confirmPassword) {
-        setErrors("Password does not match !");
-      } else {
-        navigate("/page/account");
-      }
     } catch (error) {
       setErrors(error.message);
       console.log(error);
@@ -83,32 +69,32 @@ const SignUp = () => {
                   <label htmlFor="name">Full Name</label>
                   <input
                     type="text"
-                    value={fullName}
-                    onChange={(e) => setFullName(e.target.value)}
+                    // value={fullName}
+                    // onChange={(e) => setFullName(e.target.value)}
                   />
                 </div>
                 <div className="formControl">
                   <label htmlFor="tel">Mobile Number</label>
                   <input
                     type="tel"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    // value={phone}
+                    // onChange={(e) => setPhone(e.target.value)}
                   />
                 </div>
                 <div className="formControl">
                   <label htmlFor="email">Email</label>
                   <input
                     type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
+                    // value={email}
+                    // onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="formControl">
                   <label htmlFor="password">Password</label>
                   <input
                     type={!eye ? "password" : "text"}
-                    onChange={(e) => setPassword(e.target.value)}
-                    value={password}
+                    // onChange={(e) => setPassword(e.target.value)}
+                    // value={password}
                   />
                   <div className="show">
                     {!eye ? (
@@ -122,8 +108,8 @@ const SignUp = () => {
                   <label htmlFor="repassword">Re-enter password</label>
                   <input
                     type={!confirmEye ? "password" : "text"}
-                    value={confirmPassword}
-                    onChange={(e) => setConfirmPassword(e.target.value)}
+                    // value={confirmPassword}
+                    // onChange={(e) => setConfirmPassword(e.target.value)}
                   />
                   <div className="show">
                     {!confirmEye ? (
