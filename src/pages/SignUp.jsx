@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "../components/Header/Header";
 import Image from "../assets/signupImg.svg";
 import { AiOutlineUserAdd } from "react-icons/ai";
@@ -27,9 +27,17 @@ const SignUp = () => {
 
   useEffect(() => {
     const submitData = async () => {
-      
+      if (errors === 0) {
+        try {
+          await signUp(email, password);
+        } catch (error) {
+          console.log(error);
+        }
+      }
     };
-  }, []);
+
+    return submitData();
+  }, [!errors]);
 
   return (
     <div>
