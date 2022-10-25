@@ -50,10 +50,7 @@ const AcountHeader = () => {
               Cart <img src={cart} alt="/" />
             </Link>
           </li>
-          <div
-            onClick={() => setDropDown((prev) => !prev)}
-            onMouseEnter={() => setDropDown((prev) => !prev)}
-          >
+          <div onClick={() => setDropDown((prev) => !prev)}>
             <Button text="My Account" className="loginbtn" />
           </div>
         </ul>
