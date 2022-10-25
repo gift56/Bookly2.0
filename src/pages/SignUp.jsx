@@ -49,7 +49,7 @@ const SignUp = () => {
               <form className="myForm signup" onSubmit={handleSubmit}>
                 <div className="formControl">
                   <label htmlFor="name">
-                    Full Name{" "}
+                    Full Name
                     {errors.name && (
                       <span className={`error`}>{errors.name}</span>
                     )}
@@ -63,7 +63,7 @@ const SignUp = () => {
                 </div>
                 <div className="formControl">
                   <label htmlFor="tel">
-                    Mobile Number{" "}
+                    Mobile Number
                     {errors.tel && (
                       <span className={`error`}>{errors.tel}</span>
                     )}
@@ -76,7 +76,12 @@ const SignUp = () => {
                   />
                 </div>
                 <div className="formControl">
-                  <label htmlFor="email">Email</label>
+                  <label htmlFor="email">
+                    Email
+                    {errors.name && (
+                      <span className={`error`}>{errors.name}</span>
+                    )}
+                  </label>
                   <input
                     type="email"
                     value={values.email}
