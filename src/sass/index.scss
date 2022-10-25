@@ -3,3 +3,7 @@
 
 @import "./modules/varibles";
 @import "./modules/classes";
+@import './HeaderStyle/Header.module.scss';
+@import './AccountStyles/account.module.scss';
+@import './NotFoundStyles/notFound.module.scss';
+@import './body/main.module.scss';
