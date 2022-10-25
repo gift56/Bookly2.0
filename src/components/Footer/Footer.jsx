@@ -1,5 +1,5 @@
 import React from "react";
-import FooterLg from "../assets/ftLg.png";
+import FooterLg from "../../assets/ftLg.png";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
 import { BsArrowRight } from "react-icons/bs";
 import Button from "../Button/Button";

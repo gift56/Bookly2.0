@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Image from "../assets/loginImg.svg";
+import Image from "../../assets/loginImg.svg";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { CgCloseO } from "react-icons/cg";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
-import Button from "./Button";
+import Button from "../Button/Button";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../context/AuthContext";
 
