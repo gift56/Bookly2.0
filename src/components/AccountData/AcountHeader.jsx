@@ -50,7 +50,11 @@ const AcountHeader = () => {
               Cart <img src={cart} alt="/" />
             </Link>
           </li>
-          <Button text="My Account" className="loginbtn" />
+          <Button
+            text="My Account"
+            className="loginbtn"
+            onClick={() => setDropDown((prev) => !prev)}
+          />
         </ul>
         <div onClick={() => setShow((prev) => !prev)} className="toggle">
           {show ? <FaTimes size={30} /> : <FaBars size={30} />}
@@ -72,7 +76,11 @@ const AcountHeader = () => {
               Cart <img src={cart} alt="/" />
             </Link>
           </li>
-          <Button text="My Account" className="loginbtn" />
+          <Button
+            text="My Account"
+            className="loginbtn"
+            onClick={() => setDropDown((prev) => !prev)}
+          />
         </ul>
       </nav>
       <div className={`dropdown ${dropDown ? "d_flex" : "d-n"}`}>
