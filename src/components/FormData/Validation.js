@@ -8,8 +8,10 @@ export const Validate = (values) => {
     errors.name = "FullName should be longer than 4 characters";
   }
 
-  if(!values.tel){
-    errors.tel
+  if (!values.tel) {
+    errors.tel = "Kindly Enter your Mobile Number";
+  } else if (values.tel.length < 8) {
+    errors.tel = "Not a Valid Number";
   }
 
   if (!values.email) {
