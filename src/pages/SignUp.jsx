@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Image from "../assets/signupImg.svg";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { CgCloseO } from "react-icons/cg";
