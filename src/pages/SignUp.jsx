@@ -29,7 +29,7 @@ const SignUp = () => {
     const submitData = async () => {
       if (errors === 0) {
         try {
-          await signUp(email, password);
+          await signUp(values.email, values.password);
         } catch (error) {
           console.log(error);
         }
@@ -37,6 +37,7 @@ const SignUp = () => {
     };
 
     return submitData();
+    
   }, [!errors]);
 
   return (
