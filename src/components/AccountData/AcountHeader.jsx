@@ -10,6 +10,7 @@ import Button from "../Button/Button";
 
 const AcountHeader = () => {
   const [show, setShow] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
 
   const AccountLinks = [
     {
@@ -74,7 +75,7 @@ const AcountHeader = () => {
           <Button text="My Account" className="loginbtn" />
         </ul>
       </nav>
-      <div className="dropdown">
+      <div className={`dropdown`}>
         <div className="button">
           <Button text="Log Out" className="loginbtn" />
         </div>
