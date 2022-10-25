@@ -7,7 +7,6 @@ import { CgCloseO } from "react-icons/cg";
 import { BiLock } from "react-icons/bi";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import "../sass/form.scss";
 
 const ForgetPass = () => {
   const [email, setEmail] = useState("");

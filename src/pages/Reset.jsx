@@ -9,7 +9,6 @@ import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { CgCloseO } from "react-icons/cg";
 import { BsArrowLeftCircle } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import "../sass/form.scss";
 
 const Reset = () => {
   const [eye, setEye] = useState(false);
