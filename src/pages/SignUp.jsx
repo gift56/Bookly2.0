@@ -62,24 +62,26 @@ const SignUp = () => {
                   <label htmlFor="tel">Mobile Number</label>
                   <input
                     type="tel"
-                    // value={phone}
-                    // onChange={(e) => setPhone(e.target.value)}
+                    value={values.tel}
+                    name="tel"
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="formControl">
                   <label htmlFor="email">Email</label>
                   <input
                     type="email"
-                    // value={email}
-                    // onChange={(e) => setEmail(e.target.value)}
+                    value={values.email}
+                    onChange={handleChange}
                   />
                 </div>
                 <div className="formControl">
                   <label htmlFor="password">Password</label>
                   <input
                     type={!eye ? "password" : "text"}
-                    // onChange={(e) => setPassword(e.target.value)}
-                    // value={password}
+                    value={values.password}
+                    onChange={handleChange}
+                    name="password"
                   />
                   <div className="show">
                     {!eye ? (
@@ -90,11 +92,12 @@ const SignUp = () => {
                   </div>
                 </div>
                 <div className="formControl">
-                  <label htmlFor="repassword">Re-enter password</label>
+                  <label htmlFor="confirmpassword">Re-enter password</label>
                   <input
                     type={!confirmEye ? "password" : "text"}
-                    // value={confirmPassword}
-                    // onChange={(e) => setConfirmPassword(e.target.value)}
+                    value={values.confirmPass}
+                    onChange={handleChange}
+                    name="confirmpassword"
                   />
                   <div className="show">
                     {!confirmEye ? (
