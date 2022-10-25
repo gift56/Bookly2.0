@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const AcountHeader = () => {
   const [show, setShow] = useState(false);
