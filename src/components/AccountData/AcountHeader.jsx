@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const AcountHeader = () => {
-  return (
-    <div>AcountHeader</div>
-  )
-}
+  const [show, setShow] = useState(false);
+  return <div>AcountHeader</div>;
+};
 
-export default AcountHeader
+export default AcountHeader;

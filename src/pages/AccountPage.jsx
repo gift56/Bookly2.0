@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
 
 const AccountPage = () => {
-  const [show, setShow] = useState(false);
   const AccountLinks = [
     {
       img: "",
