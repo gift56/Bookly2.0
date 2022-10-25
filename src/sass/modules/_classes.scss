@@ -54,10 +54,10 @@ a {
   margin-bottom: 15px;
 }
 .flex {
-  display: "flex";
+  display: "flex" !important;
 }
 .d-n {
-  display: none;
+  display: none !important;
 }
 .none {
   display: none;
