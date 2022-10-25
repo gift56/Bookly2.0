@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Validate } from "./Validate";
 
-const Useform = (setShowModal) => {
+const Useform = () => {
   const navigate = useNavigate();
   const [values, setValue] = useState({
     email: "",
@@ -29,7 +29,6 @@ const Useform = (setShowModal) => {
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && correctData) {
-      setShowModal(true);
       navigate("/dashboard");
     }
   }, [errors]);
