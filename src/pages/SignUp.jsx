@@ -12,7 +12,6 @@ import { UserAuth } from "../context/AuthContext";
 const SignUp = () => {
   const [eye, setEye] = useState(false);
   const [confirmEye, setConfirmEye] = useState(false);
-  const navigate = useNavigate();
   const { signUp } = UserAuth();
 
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];

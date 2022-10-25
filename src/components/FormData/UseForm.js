@@ -16,7 +16,7 @@ const Useform = (setShowModal) => {
   const handleChange = (e) => {
     setValue({ ...values, [e.target.name]: e.target.value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setErrors(Validate(values));
     const data = JSON.stringify(values);
