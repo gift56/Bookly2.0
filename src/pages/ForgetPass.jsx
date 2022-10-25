@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Image from "../assets/FPImg.svg";
-import Header from "../components/Header";
-import Button from "../components/Button";
+import Header from "../components/Header/Header";
+import Button from "../components/Button/Button";
 import { CgCloseO } from "react-icons/cg";
 import { BiLock } from "react-icons/bi";
 import { BsArrowLeftCircle } from "react-icons/bs";
