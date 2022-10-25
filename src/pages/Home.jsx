@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Partners from "../components/Home/Partners";
 import Welcome from "../components/Home/Welcome";
-import "../sass/Header.scss";
+
 
 const Home = () => {
   return (
