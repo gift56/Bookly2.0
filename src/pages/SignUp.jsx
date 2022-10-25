@@ -112,7 +112,7 @@ const SignUp = () => {
                     name="password"
                   />
                   {errors.name && (
-                    <p className={`error mobileErr`}>{errors.name}</p>
+                    <p className="error mobileErr">{errors.password}</p>
                   )}
                   <div className="show">
                     {!eye ? (
