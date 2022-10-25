@@ -53,8 +53,9 @@ const SignUp = () => {
                   <label htmlFor="name">Full Name</label>
                   <input
                     type="text"
-                    // value={fullName}
-                    // onChange={(e) => setFullName(e.target.value)}
+                    value={values.name}
+                    onChange={handleChange}
+                    name="name"
                   />
                 </div>
                 <div className="formControl">
