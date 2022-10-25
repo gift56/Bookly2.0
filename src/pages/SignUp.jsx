@@ -28,12 +28,12 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      await signUp(email, password);
-    } catch (error) {
-      setErrors(error.message);
-      console.log(error);
-    }
+    // try {
+    //   await signUp(email, password);
+    // } catch (error) {
+    //   setErrors(error.message);
+    //   console.log(error);
+    // }
   };
 
   return (
@@ -60,11 +60,6 @@ const SignUp = () => {
           <div className="formContainer">
             <div className="leftSide">
               <form className="myForm signup" onSubmit={handleSubmit}>
-                {errors && (
-                  <span style={{ textAlign: "left", color: "red" }}>
-                    {errors}
-                  </span>
-                )}
                 <div className="formControl">
                   <label htmlFor="name">Full Name</label>
                   <input
