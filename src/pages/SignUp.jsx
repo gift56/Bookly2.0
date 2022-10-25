@@ -51,7 +51,7 @@ const SignUp = () => {
                   <label htmlFor="name">
                     Full Name
                     {errors.name && (
-                      <span className={`error deskErr`}>{errors.name}</span>
+                      <span className="error deskErr">{errors.name}</span>
                     )}
                   </label>
                   <input
@@ -68,7 +68,7 @@ const SignUp = () => {
                   <label htmlFor="tel">
                     Mobile Number
                     {errors.tel && (
-                      <span className={`error`}>{errors.tel}</span>
+                      <span className="error deskErr">{errors.tel}</span>
                     )}
                   </label>
                   <input
@@ -85,7 +85,7 @@ const SignUp = () => {
                   <label htmlFor="email">
                     Email
                     {errors.email && (
-                      <span className={`error`}>{errors.email}</span>
+                      <span className="error deskErr">{errors.email}</span>
                     )}
                   </label>
                   <input
@@ -102,7 +102,7 @@ const SignUp = () => {
                   <label htmlFor="password">
                     Password
                     {errors.password && (
-                      <span className={`error`}>{errors.password}</span>
+                      <span className="error deskErr">{errors.password}</span>
                     )}
                   </label>
                   <input
@@ -126,7 +126,9 @@ const SignUp = () => {
                   <label htmlFor="confirmPass">
                     Re-enter password
                     {errors.confirmPass && (
-                      <span className={`error`}>{errors.confirmPass}</span>
+                      <span className="error deskErr">
+                        {errors.confirmPass}
+                      </span>
                     )}
                   </label>
                   <input
@@ -135,8 +137,8 @@ const SignUp = () => {
                     onChange={handleChange}
                     name="confirmPass"
                   />
-                  {errors.name && (
-                    <p className={`error mobileErr`}>{errors.name}</p>
+                  {errors.confirmPass && (
+                    <p className="error mobileErr">{errors.confirmPass}</p>
                   )}
                   <div className="show">
                     {!confirmEye ? (

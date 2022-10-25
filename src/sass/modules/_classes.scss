@@ -10,17 +10,17 @@
 .error {
   color: red;
   text-align: left;
-  font-size: 14px;
+  font-size: 14px !important;
 }
 .mobileErr {
   @media screen and (min-width: 917px) {
-    display: none;
+    display: none !important;
   }
 }
 .deskErr {
-  display: none;
+  display: none !important;
   @media screen and (min-width: 917px) {
-    display: flex;
+    display: flex !important;
   }
 }
 a {
