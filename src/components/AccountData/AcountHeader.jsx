@@ -75,7 +75,7 @@ const AcountHeader = () => {
           <Button text="My Account" className="loginbtn" />
         </ul>
       </nav>
-      <div className={`dropdown`}>
+      <div className={`dropdown ${dropDown ? "d_flex" : "d-n"}`}>
         <div className="button">
           <Button text="Log Out" className="loginbtn" />
         </div>
