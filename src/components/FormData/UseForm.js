@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Validate } from "./Validate";
+import { Validate } from "./Validation";
+
 
 const Useform = () => {
   const navigate = useNavigate();
