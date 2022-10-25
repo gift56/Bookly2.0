@@ -51,7 +51,7 @@ const SignUp = () => {
                   <label htmlFor="name">
                     Full Name
                     {errors.name && (
-                      <span className={`error`}>{errors.name}</span>
+                      <span className={`error deskErr`}>{errors.name}</span>
                     )}
                   </label>
                   <input
@@ -60,6 +60,9 @@ const SignUp = () => {
                     onChange={handleChange}
                     name="name"
                   />
+                  {errors.name && (
+                    <p className={`error mobileErr`}>{errors.name}</p>
+                  )}
                 </div>
                 <div className="formControl">
                   <label htmlFor="tel">
@@ -74,6 +77,9 @@ const SignUp = () => {
                     onChange={handleChange}
                     name="tel"
                   />
+                  {errors.name && (
+                    <p className={`error mobileErr`}>{errors.name}</p>
+                  )}
                 </div>
                 <div className="formControl">
                   <label htmlFor="email">
@@ -88,6 +94,9 @@ const SignUp = () => {
                     onChange={handleChange}
                     name="email"
                   />
+                  {errors.name && (
+                    <p className={`error mobileErr`}>{errors.name}</p>
+                  )}
                 </div>
                 <div className="formControl">
                   <label htmlFor="password">
@@ -102,6 +111,9 @@ const SignUp = () => {
                     onChange={handleChange}
                     name="password"
                   />
+                  {errors.name && (
+                    <p className={`error mobileErr`}>{errors.name}</p>
+                  )}
                   <div className="show">
                     {!eye ? (
                       <BsEyeSlash onClick={showPassword} />
@@ -123,6 +135,9 @@ const SignUp = () => {
                     onChange={handleChange}
                     name="confirmPass"
                   />
+                  {errors.name && (
+                    <p className={`error mobileErr`}>{errors.name}</p>
+                  )}
                   <div className="show">
                     {!confirmEye ? (
                       <BsEyeSlash onClick={confirmShowPassword} />
