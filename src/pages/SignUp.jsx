@@ -8,10 +8,12 @@ import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 import Button from "../components/Button/Button";
 import { Link } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import Useform from "../components/FormData/UseForm";
 
 const SignUp = () => {
   const [eye, setEye] = useState(false);
   const [confirmEye, setConfirmEye] = useState(false);
+  const { handleChange, handleSubmit, values, errors } = Useform();
   const { signUp } = UserAuth();
 
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
@@ -22,7 +24,6 @@ const SignUp = () => {
   const confirmShowPassword = () => {
     setConfirmEye(!confirmEye);
   };
-
 
   return (
     <div>
