@@ -45,16 +45,12 @@ const AcountHeader = () => {
           <li>
             <Link to="/request">Request a book</Link>
           </li>
-          <li>
+          <li onClick={() => setDropDown((prev) => !prev)}>
             <Link to="/cart">
               Cart <img src={cart} alt="/" />
             </Link>
           </li>
-          <Button
-            text="My Account"
-            className="loginbtn"
-            onClick={() => setDropDown((prev) => !prev)}
-          />
+          <Button text="My Account" className="loginbtn" />
         </ul>
         <div onClick={() => setShow((prev) => !prev)} className="toggle">
           {show ? <FaTimes size={30} /> : <FaBars size={30} />}
