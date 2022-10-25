@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "./Button";
+import Button from "./Button/Button";
 import Hero from "../assets/heroImg.png";
 import { options } from "../utils/options";
 import { Link } from "react-router-dom";
