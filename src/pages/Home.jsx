@@ -4,7 +4,7 @@ import Features from "../components/Features";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Partners from "../components/Partners";
-import Welcome from "../components/Welcome";
+import Welcome from "../components/Home/Welcome";
 import "../sass/Header.scss";
 
 const Home = () => {
