@@ -6,20 +6,7 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button/Button";
 
 const AccountPage = () => {
-  const AccountLinks = [
-    {
-      img: "",
-      name: "My Account",
-    },
-    {
-      img: "",
-      name: "Orders",
-    },
-    {
-      img: "",
-      name: "Saved items",
-    },
-  ];
+
   return (
     <>
       <header id="Home" className="accHead">
