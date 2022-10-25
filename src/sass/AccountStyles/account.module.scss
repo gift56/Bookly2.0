@@ -9,6 +9,12 @@
     gap: 1rem;
     align-items: flex-start;
     justify-content: flex-start;
+    @media screen and (max-width: 917px) {
+      right: 0;
+      top: 524%;
+      width: 100%;
+      left: 0;
+    }
 
     padding: 1rem 0;
     .button {
