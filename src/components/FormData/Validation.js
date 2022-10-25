@@ -24,6 +24,11 @@ export const Validate = (values) => {
   } else if (values.password.length < 5) {
     errors.password = "Password must be more than five characters.";
   }
+  if (!values.confirmPass) {
+    errors.confirmPass = "Kindly Confirm your password";
+  } else if (values.confirmPass !== values.password) {
+    errors.confirmPass = "Password does not match";
+  }
 
   return errors;
 };
