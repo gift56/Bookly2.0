@@ -12,6 +12,17 @@
   text-align: left;
   font-size: 14px;
 }
+.mobileErr {
+  @media screen and (min-width: 917px) {
+    display: none;
+  }
+}
+.deskErr {
+  display: none;
+  @media screen and (min-width: 917px) {
+    display: flex;
+  }
+}
 a {
   text-decoration: none;
   color: inherit;
