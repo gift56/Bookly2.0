@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserAuth } from "../../context/AuthContext";
 import { Validate } from "./Validation";
 
-
 const Useform = () => {
+  const { signUp } = UserAuth();
   const navigate = useNavigate();
   const [values, setValue] = useState({
     email: "",
@@ -25,6 +26,11 @@ const Useform = () => {
     setErrors(Validate(values));
     const data = JSON.stringify(values);
     console.log(data);
+    try {
+      await signUp(values.email, values.password);
+    } catch (error) {
+      console.log(error);
+    }
     setCorrectdata(true);
   };
 

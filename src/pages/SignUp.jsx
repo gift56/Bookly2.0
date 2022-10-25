@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import Image from "../assets/signupImg.svg";
 import { AiOutlineUserAdd } from "react-icons/ai";
@@ -7,14 +7,12 @@ import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { FaGoogle, FaApple, FaFacebookF } from "react-icons/fa";
 import Button from "../components/Button/Button";
 import { Link } from "react-router-dom";
-import { UserAuth } from "../context/AuthContext";
 import Useform from "../components/FormData/UseForm";
 
 const SignUp = () => {
   const [eye, setEye] = useState(false);
   const [confirmEye, setConfirmEye] = useState(false);
   const { handleChange, handleSubmit, values, errors } = Useform();
-  const { signUp } = UserAuth();
 
   const footerLinks = [<FaGoogle />, <FaApple />, <FaFacebookF />];
 
@@ -24,21 +22,6 @@ const SignUp = () => {
   const confirmShowPassword = () => {
     setConfirmEye(!confirmEye);
   };
-
-  useEffect(() => {
-    const submitData = async () => {
-      if (errors === 0) {
-        try {
-          await signUp(values.email, values.password);
-        } catch (error) {
-          console.log(error);
-        }
-      }
-    };
-
-    return submitData();
-    
-  }, [!errors]);
 
   return (
     <div>
