@@ -50,7 +50,9 @@ const SignUp = () => {
                 <div className="formControl">
                   <label htmlFor="name">
                     Full Name{" "}
-                    {errors.name && <span className={``}>{errors.name}</span>}
+                    {errors.name && (
+                      <span className={`error`}>{errors.name}</span>
+                    )}
                   </label>
                   <input
                     type="text"
@@ -60,7 +62,12 @@ const SignUp = () => {
                   />
                 </div>
                 <div className="formControl">
-                  <label htmlFor="tel">Mobile Number</label>
+                  <label htmlFor="tel">
+                    Mobile Number{" "}
+                    {errors.tel && (
+                      <span className={`error`}>{errors.tel}</span>
+                    )}
+                  </label>
                   <input
                     type="tel"
                     value={values.tel}
