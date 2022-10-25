@@ -36,7 +36,7 @@ const Useform = () => {
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && correctData) {
-      navigate("/dashboard");
+      navigate("/page/account");
     }
   }, [errors]);
 
