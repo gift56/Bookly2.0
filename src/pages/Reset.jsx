@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
-import Header from "../components/Header";
+import Header from "../components/Header/Header";
 import Image from "../assets/resetImg.svg";
 import AvatarGirl from "../assets/avatarImg.svg";
 import PhoneImg from "../assets/phoneImg.svg";
 import PassImg from "../assets/passreset.svg";
-import Button from "../components/Button";
+import Button from "../components/Button/Button";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import { CgCloseO } from "react-icons/cg";
 import { BsArrowLeftCircle } from "react-icons/bs";
@@ -140,7 +140,11 @@ const Reset = () => {
         <div className="card">
           <div className="Cardcontainer">
             <div className="icon">
-              <CgCloseO className="closeIcon" size={30} onClick={() => setShowModal(false)} />
+              <CgCloseO
+                className="closeIcon"
+                size={30}
+                onClick={() => setShowModal(false)}
+              />
             </div>
             <div className="images">
               <div>
