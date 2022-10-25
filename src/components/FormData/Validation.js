@@ -8,6 +8,10 @@ export const Validate = (values) => {
     errors.name = "FullName should be longer than 4 characters";
   }
 
+  if(!values.tel){
+    errors.tel
+  }
+
   if (!values.email) {
     errors.email = "Email Field is Required";
   } else if (!patten.test(values.email)) {
