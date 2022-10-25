@@ -86,14 +86,15 @@ const SignUp = () => {
                     type="email"
                     value={values.email}
                     onChange={handleChange}
+                    name="email"
                   />
                 </div>
                 <div className="formControl">
                   <label htmlFor="password">
                     Password
-                    {errors.password ? (
+                    {errors.password && (
                       <span className={`error`}>{errors.password}</span>
-                    ) : null}
+                    )}
                   </label>
                   <input
                     type={!eye ? "password" : "text"}
@@ -110,17 +111,17 @@ const SignUp = () => {
                   </div>
                 </div>
                 <div className="formControl">
-                  <label htmlFor="confirmpassword">
+                  <label htmlFor="confirmPass">
                     Re-enter password
-                    {errors.confirmPass ? (
+                    {errors.confirmPass && (
                       <span className={`error`}>{errors.confirmPass}</span>
-                    ) : null}
+                    )}
                   </label>
                   <input
                     type={!confirmEye ? "password" : "text"}
                     value={values.confirmPass}
                     onChange={handleChange}
-                    name="confirmpassword"
+                    name="confirmPass"
                   />
                   <div className="show">
                     {!confirmEye ? (
