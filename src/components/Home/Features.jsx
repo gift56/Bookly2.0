@@ -1,5 +1,5 @@
 import React from "react";
-import { featuresData } from "../utils/booksData";
+import { featuresData } from "../../utils/booksData";
 import BookFeature from "./BookFeature";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Button from "../Button/Button";
