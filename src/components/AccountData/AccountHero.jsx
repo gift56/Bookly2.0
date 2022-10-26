@@ -4,7 +4,7 @@ const AccountHero = () => {
   return (
     <section className="accountHeroArea">
       <div className="contain">
-        <div className="accountCon">Hello world</div>
+        <div className="accountCon"></div>
       </div>
     </section>
   );
