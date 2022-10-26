@@ -135,7 +135,13 @@ const AcountHeader = () => {
         </div>
         <ul className="dropdownList">
           {AccountLinks.map(({ img, name }, index) => (
-            <li key={index}>
+            <li
+              key={index}
+              onClick={() => {
+                setShow(false);
+                setDropDown(false);
+              }}
+            >
               <img src={img} alt={name} />
               <p>{name}</p>
             </li>
