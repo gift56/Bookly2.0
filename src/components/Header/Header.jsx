@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../../assets/logo.png";
 import cart from "../../assets/cart.png";
@@ -7,6 +7,21 @@ import { Link } from "react-router-dom";
 
 const Header = ({ btnText, linkText }) => {
   const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      const nav = document.querySelector("header");
+      if (e.currentTarget.scrollY > 50) {
+        nav.classList.add("nav__scrolled");
+      } else {
+        nav.classList.remove("nav__scrolled");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header id="Home">
