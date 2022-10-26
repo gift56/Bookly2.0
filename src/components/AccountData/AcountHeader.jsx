@@ -85,21 +85,46 @@ const AcountHeader = () => {
       </nav>
       <nav className={`mobileNav ${show ? "normal" : "left"}`}>
         <ul className="ul">
-          <li>
+          <li
+            onClick={() => {
+              setShow(false);
+              setDropDown(false);
+            }}
+          >
             <Link to="/">Home</Link>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              setShow(false);
+              setDropDown(false);
+            }}
+          >
             <Link to="/catergories">Categories</Link>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              setShow(false);
+              setDropDown(false);
+            }}
+          >
             <Link to="/request">Request a book</Link>
           </li>
-          <li>
+          <li
+            onClick={() => {
+              setShow(false);
+              setDropDown(false);
+            }}
+          >
             <Link to="/cart">
               Cart <img src={cart} alt="/" />
             </Link>
           </li>
-          <div onClick={() => setDropDown((prev) => !prev)}>
+          <div
+            onClick={() => {
+              setDropDown((prev) => !prev);
+              setShow(false);
+            }}
+          >
             <Button text="My Account" className="loginbtn" />
           </div>
         </ul>
