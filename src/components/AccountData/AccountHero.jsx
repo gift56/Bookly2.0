@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
 
 const AccountHero = () => {
   return (
-    <div>AccountHero</div>
-  )
-}
+    <section className="accountHeroArea">
+      <div className="contain">
+        <div className="accountCon">Hello world</div>
+      </div>
+    </section>
+  );
+};
 
-export default AccountHero
+export default AccountHero;
