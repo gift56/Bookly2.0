@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../../assets/logo.png";
 import cart from "../../assets/cart.png";
@@ -26,6 +26,7 @@ const AcountHeader = () => {
       name: "Saved items",
     },
   ];
+
   return (
     <header id="Home" className="accHead">
       <nav className="contain desktopNav">

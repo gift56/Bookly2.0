@@ -10,3 +10,12 @@
 @import "./body/main.module.scss";
 @import "./FormStyles/form.module.scss";
 @import "./Footer/Footer.module.scss";
+
+.nav__scrolled {
+  box-shadow: 0px 4px 4px rgba(236, 248, 241, 0.5);
+  position: fixed !important;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+  transition: all 300ms ease;
+}
