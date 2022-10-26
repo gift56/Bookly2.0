@@ -122,7 +122,6 @@ const AcountHeader = () => {
           <div
             onClick={() => {
               setDropDown((prev) => !prev);
-              setShow(false);
             }}
           >
             <Button text="My Account" className="loginbtn" />
