@@ -27,6 +27,21 @@ const AcountHeader = () => {
     },
   ];
 
+  useEffect(() => {
+    const handleScroll = (e) => {
+      const nav = document.querySelector("header");
+      if (e.currentTarget.scrollY > 50) {
+        nav.classList.add("nav__scrolled");
+      } else {
+        nav.classList.remove("nav__scrolled");
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <header id="Home" className="accHead">
       <nav className="contain desktopNav">
