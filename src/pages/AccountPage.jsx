@@ -1,4 +1,3 @@
-import React from "react";
 import AccountHero from "../components/AccountData/AccountHero";
 import AcountHeader from "../components/AccountData/AcountHeader";
 
