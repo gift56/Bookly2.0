@@ -48,7 +48,7 @@ const FavoriteBook = () => {
                   <p>{detail}</p>
                 </div>
               ))}
-              <button></button>
+              <button>Learn more</button>
             </div>
           </div>
         </div>
