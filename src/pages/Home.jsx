@@ -11,7 +11,7 @@ const Home = () => {
     <>
       <Header btnText="login" linkText="login" />
       <Welcome />
-      <Features rowId="1" title="Top Features" prices={true} />
+      <Features rowId="1" title="Top Features" />
       <Features rowId="2" title="New Arrivals" />
       <Customers />
       <Partners />
