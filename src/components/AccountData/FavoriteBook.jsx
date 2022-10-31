@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { FaLongArrowAltRight } from "react-icons/fa";
 import governBook from "../../assets/governB.png";
 import historyBook from "../../assets/historyB.png";
 import Button from "../Button/Button";
@@ -49,7 +51,10 @@ const FavoriteBook = () => {
                   <p>{detail}</p>
                 </div>
               ))}
-              <Button className={`myBtn`} text="Learn more" />
+              <Link to="/">
+                <Button className={`myBtn`} text="Learn more" />
+                <FaLongArrowAltRight />
+              </Link>
             </div>
           </div>
         </div>
