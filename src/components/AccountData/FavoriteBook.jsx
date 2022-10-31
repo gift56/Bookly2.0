@@ -42,7 +42,7 @@ const FavoriteBook = () => {
               </p>
             </div>
             <div className="ratings">
-                {Ratings.map(({},i))}
+                {Ratings.map(({rate,detail},i))}
             </div>
           </div>
         </div>
