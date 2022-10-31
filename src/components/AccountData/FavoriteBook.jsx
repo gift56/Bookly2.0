@@ -15,7 +15,7 @@ const FavoriteBook = () => {
       detail: "New Arrivals",
     },
     {
-      rate: "60+",
+      rate: "75+",
       detail: "New Arrivals",
     },
   ];
