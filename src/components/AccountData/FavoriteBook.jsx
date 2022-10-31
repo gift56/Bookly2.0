@@ -10,6 +10,10 @@ const FavoriteBook = () => {
       rate: "80+",
       detail: "Book Bestsellers",
     },
+    {
+      rate: "80+",
+      detail: "Book Bestsellers",
+    },
   ];
 
   return (
