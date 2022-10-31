@@ -51,8 +51,8 @@ const FavoriteBook = () => {
                   <p>{detail}</p>
                 </div>
               ))}
-              <Link to="/">
-                <Button className={`myBtn`} text="Learn more" />
+              <Link to="/" className="">
+                <Button  text="Learn more" />
                 <FaLongArrowAltRight />
               </Link>
             </div>
