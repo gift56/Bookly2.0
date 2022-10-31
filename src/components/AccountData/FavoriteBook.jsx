@@ -45,7 +45,7 @@ const FavoriteBook = () => {
               {Ratings.map(({ rate, detail }, i) => (
                 <div className="rate" key={i}>
                   <p>{rate}</p>
-                  <p></p>
+                  <p>{detail}</p>
                 </div>
               ))}
             </div>
