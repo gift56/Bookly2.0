@@ -50,4 +50,11 @@
 }
 .accountHeroArea {
   background-color: $btnbg3;
+  .accountCon{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
