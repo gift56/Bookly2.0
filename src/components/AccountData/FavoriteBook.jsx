@@ -5,11 +5,12 @@ import historyBook from "../../assets/historyB.png";
 const FavoriteBook = () => {
   const bookImages = [governBook, historyBook, governBook, historyBook];
 
-  const Ratings=[
+  const Ratings = [
     {
-        rate:""
-    }
-  ]
+      rate: "80+",
+      detail:""
+    },
+  ];
 
   return (
     <section className="favoriteCon">
@@ -32,9 +33,7 @@ const FavoriteBook = () => {
                 and fascinating books for kids and adults alike.
               </p>
             </div>
-            <div className="ratings">
-
-            </div>
+            <div className="ratings"></div>
           </div>
         </div>
       </div>
