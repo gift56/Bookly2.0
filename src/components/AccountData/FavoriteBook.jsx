@@ -11,12 +11,14 @@ const FavoriteBook = () => {
         <div className="favoriteArea">
           <div className="favoriteLeftside">
             {bookImages.map((image,index)=>(
-                <div className="image">
+                <div className="image" key={index}>
                     <img src={image} alt="book_image" />
                 </div>
             ))}
           </div>
-          <div className="favoriteRightside"></div>
+          <div className="favoriteRightside">
+
+          </div>
         </div>
       </div>
     </section>
