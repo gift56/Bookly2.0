@@ -1,6 +1,7 @@
 import React from "react";
 import governBook from "../../assets/governB.png";
 import historyBook from "../../assets/historyB.png";
+import Button from "../Button/Button";
 
 const FavoriteBook = () => {
   const bookImages = [governBook, historyBook, governBook, historyBook];
@@ -48,7 +49,7 @@ const FavoriteBook = () => {
                   <p>{detail}</p>
                 </div>
               ))}
-              <button>Learn more</button>
+              <Button className={`myBtn`} text="Learn more" />
             </div>
           </div>
         </div>
