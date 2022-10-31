@@ -4,7 +4,7 @@ import BookFeature from "./BookFeature";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import Button from "../Button/Button";
 
-const Features = ({ rowId, title }) => {
+const Features = ({ rowId, title, prices }) => {
   const slideLeft = () => {
     let slider = document.getElementById("slideShow" + rowId);
     slider.scrollLeft = slider.scrollLeft - 400;
@@ -26,6 +26,7 @@ const Features = ({ rowId, title }) => {
                 item={item}
                 rowId={rowId}
                 title={title}
+                prices={prices}
               />
             ))}
           </div>

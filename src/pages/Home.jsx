@@ -6,13 +6,12 @@ import Header from "../components/Header/Header";
 import Partners from "../components/Home/Partners";
 import Welcome from "../components/Home/Welcome";
 
-
 const Home = () => {
   return (
     <>
       <Header btnText="login" linkText="login" />
       <Welcome />
-      <Features rowId="1" title="Top Features" />
+      <Features rowId="1" title="Top Features" prices={true} />
       <Features rowId="2" title="New Arrivals" />
       <Customers />
       <Partners />
