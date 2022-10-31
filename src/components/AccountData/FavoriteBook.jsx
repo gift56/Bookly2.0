@@ -41,7 +41,9 @@ const FavoriteBook = () => {
                 and fascinating books for kids and adults alike.
               </p>
             </div>
-            <div className="ratings"></div>
+            <div className="ratings">
+                {Ratings}
+            </div>
           </div>
         </div>
       </div>
