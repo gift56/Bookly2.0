@@ -17,7 +17,11 @@ const FavoriteBook = () => {
             ))}
           </div>
           <div className="favoriteRightside">
-            <div className="titleArea"></div>
+            <div className="titleArea">
+              <h2>
+                Find your favorite books <span>here</span>
+              </h2>
+            </div>
           </div>
         </div>
       </div>
