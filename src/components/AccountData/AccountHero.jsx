@@ -1,4 +1,5 @@
 import { options } from "../../utils/options";
+import Button from "../Button/Button";
 
 const AccountHero = () => {
   return (
