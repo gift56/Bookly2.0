@@ -101,10 +101,10 @@
     @media screen and (max-width: 310px) {
       display: none;
     }
+  
     .select {
       display: flex;
       align-items: center;
-      background-color: $white;
       border-radius: 10px;
       .search {
         padding: 2px 2px;
