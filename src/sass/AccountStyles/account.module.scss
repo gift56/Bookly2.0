@@ -83,7 +83,6 @@
     }
   }
   .selections {
-    background-color: $optionBg;
     width: 100%;
     border-radius: 10px;
     @media screen and (min-width: 580px) {
@@ -111,6 +110,8 @@
         padding: 2px 2px;
         background: $btnbg;
         margin: 0 !important;
+        height: 38px;
+        border-radius: 0px 15px 15px 0px;
       }
       select {
         width: 100%;
