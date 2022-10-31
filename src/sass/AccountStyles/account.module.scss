@@ -1,9 +1,17 @@
-.acountPagewrapper{
-  .Feature{
-    .featureContent{
-.bookDetails{
-  
-}
+.acountPagewrapper {
+  .buttonShow {
+    display: none !important;
+  }
+  .Feature {
+    .featureContent {
+      .bookDetails {
+        .bookCard {
+          .priceDetails,
+          .Add {
+            display: none !important;
+          }
+        }
+      }
     }
   }
 }
