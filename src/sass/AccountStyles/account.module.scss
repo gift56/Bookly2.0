@@ -85,7 +85,6 @@
   .selections {
     background-color: $optionBg;
     width: 100%;
-    padding: 12px;
     border-radius: 10px;
     @media screen and (min-width: 580px) {
       padding: 20px 20px;
@@ -110,17 +109,14 @@
       border-radius: 10px;
       .search {
         padding: 2px 2px;
-        background: $btnbg3;
+        background: $btnbg;
         margin: 0 !important;
       }
       select {
-        width: 44px;
+        width: 100%;
         padding: 3px;
         border: none;
         outline: none;
-        @media screen and (min-width: 330px) {
-          width: 100%;
-        }
         &:first-child {
           border-top-left-radius: 10px;
           border-bottom-left-radius: 10px;
