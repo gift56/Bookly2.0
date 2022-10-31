@@ -4,6 +4,7 @@ import historyBook from "../../assets/historyB.png";
 
 const FavoriteBook = () => {
   const booksImages = [governBook, historyBook, governBook, historyBook];
+  
   return (
     <section className="favoriteCon">
       <div className="contain">
