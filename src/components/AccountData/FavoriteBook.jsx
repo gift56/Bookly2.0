@@ -7,7 +7,7 @@ const FavoriteBook = () => {
 
   const Ratings=[
     {
-        
+        rate:""
     }
   ]
 
