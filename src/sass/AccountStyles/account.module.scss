@@ -101,12 +101,15 @@
       align-items: center;
       border-radius: 10px;
       .search {
-        padding: 2px 16px;
+        padding: 2px 2px;
         background: $btnbg;
         margin: 0 !important;
         height: 38px;
         border-radius: 0px 15px 15px 0px;
         border-color: $btnbg;
+        @media screen and (min-width: 580px) {
+          padding: 4px 20px;
+        }
       }
       select {
         width: 100%;
