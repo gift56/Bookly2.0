@@ -16,7 +16,7 @@ const FavoriteBook = () => {
     },
     {
       rate: "75+",
-      detail: "New Arrivals",
+      detail: "Books for coming",
     },
   ];
 
