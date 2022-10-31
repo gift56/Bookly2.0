@@ -48,6 +48,7 @@ const FavoriteBook = () => {
                   <p>{detail}</p>
                 </div>
               ))}
+              <button></button>
             </div>
           </div>
         </div>
