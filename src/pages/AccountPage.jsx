@@ -4,11 +4,11 @@ import Features from "../components/Home/Features";
 
 const AccountPage = () => {
   return (
-    <>
+    <div>
       <AcountHeader />
       <AccountHero />
-      {/* <Features rowId="1" title="Best Seller Books" /> */}
-    </>
+      <Features rowId="1" title="Best Seller Books" />
+    </div>
   );
 };
 
