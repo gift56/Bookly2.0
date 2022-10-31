@@ -7,7 +7,7 @@ const AccountPage = () => {
     <>
       <AcountHeader />
       <AccountHero />
-      <Features rowId="1" title="Top Features" />
+      <Features rowId="1" title="Best Seller Books" />
     </>
   );
 };
