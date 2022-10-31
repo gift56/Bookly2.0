@@ -14,6 +14,10 @@ const FavoriteBook = () => {
       rate: "60+",
       detail: "New Arrivals",
     },
+    {
+      rate: "60+",
+      detail: "New Arrivals",
+    },
   ];
 
   return (
