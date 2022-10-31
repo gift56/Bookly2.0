@@ -21,6 +21,10 @@ const FavoriteBook = () => {
               <h2>
                 Find your favorite books <span>here</span>
               </h2>
+              <p>
+                Bookly regularly updates its library with the most interesting
+                and fascinating books for kids and adults alike.
+              </p>
             </div>
           </div>
         </div>
