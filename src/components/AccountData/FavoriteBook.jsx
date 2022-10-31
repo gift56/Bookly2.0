@@ -5,6 +5,12 @@ import historyBook from "../../assets/historyB.png";
 const FavoriteBook = () => {
   const bookImages = [governBook, historyBook, governBook, historyBook];
 
+  const Ratings=[
+    {
+        
+    }
+  ]
+
   return (
     <section className="favoriteCon">
       <div className="contain">
@@ -25,6 +31,9 @@ const FavoriteBook = () => {
                 Bookly regularly updates its library with the most interesting
                 and fascinating books for kids and adults alike.
               </p>
+            </div>
+            <div className="ratings">
+
             </div>
           </div>
         </div>
