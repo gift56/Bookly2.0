@@ -59,4 +59,15 @@
     align-items: flex-start;
     gap: 1rem;
   }
+  .titleArea {
+    h2 {
+      color: $white;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 25px;
+      @media screen and (min-width: $tab) {
+        font-size: 50px;
+      }
+    }
+  }
 }
