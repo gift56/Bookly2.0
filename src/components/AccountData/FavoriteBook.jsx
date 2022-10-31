@@ -8,7 +8,9 @@ const FavoriteBook = () => {
     <section className="favoriteCon">
       <div className="contain">
         <div className="favoriteArea">
-          <div className="favoriteLeftside"></div>
+          <div className="favoriteLeftside">
+            {}
+          </div>
           <div className="favoriteRightside"></div>
         </div>
       </div>
