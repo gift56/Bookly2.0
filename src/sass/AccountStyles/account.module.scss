@@ -169,7 +169,7 @@
     justify-content: flex-start;
     width: 100%;
     gap: 2rem;
-    
+
     .favoriteRightside {
       width: 100%;
       display: flex;
@@ -215,6 +215,10 @@
         display: flex;
         flex-direction: column;
         gap: 2rem;
+        .myBtn{
+          display: flex;
+          align-items: center;
+        }
         .ratings {
           display: flex;
           justify-content: space-between;
@@ -223,6 +227,11 @@
           .rate {
             display: flex;
             flex-direction: column;
+            p{
+              &:first-child{
+                columns: $btnbg;
+              }
+            }
           }
         }
       }
