@@ -44,15 +44,17 @@ const FavoriteBook = () => {
                 and fascinating books for kids and adults alike.
               </p>
             </div>
-            <div className="ratings">
-              {Ratings.map(({ rate, detail }, i) => (
-                <div className="rate" key={i}>
-                  <p>{rate}</p>
-                  <p>{detail}</p>
-                </div>
-              ))}
-              <Link to="/" className="">
-                <Button  text="Learn more" />
+            <div className="downPart">
+              <div className="ratings">
+                {Ratings.map(({ rate, detail }, i) => (
+                  <div className="rate" key={i}>
+                    <p>{rate}</p>
+                    <p>{detail}</p>
+                  </div>
+                ))}
+              </div>
+              <Link to="/" className="myBtn">
+                <Button text="Learn more" />
                 <FaLongArrowAltRight />
               </Link>
             </div>
