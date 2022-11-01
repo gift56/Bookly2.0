@@ -219,6 +219,14 @@
         .myBtn {
           display: flex;
           align-items: center;
+          justify-content: flex-start;
+          button {
+            background: transparent;
+            color: $black;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 25px;
+          }
         }
         .ratings {
           display: flex;
