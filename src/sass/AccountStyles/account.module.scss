@@ -162,7 +162,8 @@
 }
 .favoriteCon {
   background-color: $white;
-  .favoriteArea{
+  .favoriteArea {
     display: flex;
+    flex-direction: column-reverse;
   }
 }
