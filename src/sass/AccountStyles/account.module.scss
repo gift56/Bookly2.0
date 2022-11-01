@@ -229,7 +229,7 @@
             flex-direction: column;
             p{
               &:first-child{
-                columns: $btnbg;
+                color: $btnbg;
               }
             }
           }
