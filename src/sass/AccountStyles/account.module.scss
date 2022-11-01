@@ -162,4 +162,7 @@
 }
 .favoriteCon {
   background-color: $white;
+  .favoriteArea{
+    display: flex;
+  }
 }
