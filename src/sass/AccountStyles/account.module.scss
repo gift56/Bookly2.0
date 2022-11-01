@@ -210,14 +210,19 @@
           }
         }
       }
-      .ratings {
+      .downPart {
         display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        width: 100%;
-        .rate {
+        flex-direction: column;
+        gap: 2rem;
+        .ratings {
           display: flex;
-          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 100%;
+          .rate {
+            display: flex;
+            flex-direction: column;
+          }
         }
       }
     }
